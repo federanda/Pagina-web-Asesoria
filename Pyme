@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soluciones PyMES | FR Asesoría Financiera</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="page-pymes">
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg class="logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+          <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+        </svg>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Acerca de mí</a></li>
+        <li><a href="personas.html">Asesoría Personal</a></li>
+        <li><a href="pymes.html" class="active">PyMES</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <p class="section-label">Empresas</p>
+        <h2 class="page-title">Soluciones para PyMES</h2>
+        <p class="page-subtitle">El mercado de capitales y el sistema bancario ofrecen herramientas de financiamiento accesibles para las pequeñas y medianas empresas. Te ayudo a encontrar la más adecuada para tu negocio.</p>
+      </div>
+    </section>
+
+    <!-- MERCADO DE CAPITALES -->
+    <section class="pymes-section">
+      <div class="container">
+        <p class="section-label">Mercado de Capitales</p>
+        <h3 class="section-title">Financiamiento bursátil para PyMES</h3>
+        <p class="section-desc">El mercado de capitales argentino cuenta con instrumentos especialmente diseñados para que las pequeñas y medianas empresas accedan a financiamiento ágil y a tasas competitivas, sin depender exclusivamente del crédito bancario tradicional.</p>
+
+        <div class="instruments-grid">
+
+          <div class="instrument-card">
+            <div class="instrument-tag">Mercado de Capitales</div>
+            <h4>Cheque de Pago Diferido (CPD)</h4>
+            <p>El cheque de pago diferido es un instrumento de crédito que permite a las empresas descontar sus cheques a cobrar en el mercado bursátil antes de su vencimiento, obteniendo liquidez inmediata a cambio de una tasa de descuento.</p>
+            <ul class="instrument-detail">
+              <li>Acceso inmediato a liquidez sin endeudamiento bancario</li>
+              <li>Tasas generalmente inferiores a las del crédito bancario tradicional</li>
+              <li>Operatoria ágil a través de un agente de bolsa</li>
+              <li>Disponible para cheques propios (avalados) y de terceros (patrocinados)</li>
+            </ul>
+          </div>
+
+          <div class="instrument-card">
+            <div class="instrument-tag">Mercado de Capitales</div>
+            <h4>Facturas de Crédito Electrónicas (FCE)</h4>
+            <p>Las facturas de crédito electrónicas MiPyME son documentos de crédito emitidos por pequeñas y medianas empresas que pueden negociarse en el mercado bursátil a través del sistema FECRED, permitiendo anticipar el cobro de facturas pendientes.</p>
+            <ul class="instrument-detail">
+              <li>Financiamiento a partir de facturas emitidas a grandes empresas</li>
+              <li>Instrumento obligatorio para empresas con cierto nivel de facturación</li>
+              <li>Negociación electrónica en el mercado secundario</li>
+              <li>Mejora el flujo de caja sin afectar la relación comercial</li>
+            </ul>
+          </div>
+
+          <div class="instrument-card">
+            <div class="instrument-tag">Mercado de Capitales</div>
+            <h4>Pagarés Bursátiles</h4>
+            <p>El pagaré bursátil es un instrumento de deuda emitido por una empresa PyME y negociado en el mercado de capitales. Permite obtener financiamiento de corto y mediano plazo de manera directa, conectando a la empresa con inversores institucionales y minoristas.</p>
+            <ul class="instrument-detail">
+              <li>Emisión directa en el mercado sin intermediación bancaria</li>
+              <li>Plazos flexibles (30 a 360 días típicamente)</li>
+              <li>Posibilidad de denominar en pesos o en dólares</li>
+              <li>Construcción de historial crediticio en el mercado</li>
+            </ul>
+          </div>
+
+          <div class="instrument-card featured">
+            <div class="instrument-tag">Mercado de Capitales</div>
+            <h4>Obligaciones Negociables PyME (ON PyME)</h4>
+            <p>Las Obligaciones Negociables son títulos de deuda emitidos por empresas que cotizan en el mercado de capitales. El régimen PyME contempla requisitos simplificados y costos reducidos para que las medianas empresas accedan a este instrumento de financiamiento de mediano y largo plazo.</p>
+            <ul class="instrument-detail">
+              <li>Financiamiento de largo plazo (1 a 5 años o más)</li>
+              <li>Tasas competitivas y estructura de capital flexible</li>
+              <li>Posibilidad de emitir en pesos, dólares o ajustadas por CER/UVA</li>
+              <li>Régimen simplificado con menores requisitos que una gran empresa</li>
+              <li>Mejora el perfil crediticio y la visibilidad de la empresa</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MERCADO BANCARIO -->
+    <section class="pymes-section alt-bg">
+      <div class="container">
+        <p class="section-label">Sistema Bancario</p>
+        <h3 class="section-title">Financiamiento bancario para PyMES</h3>
+        <p class="section-desc">El sistema bancario también ofrece líneas específicas para PyMES con condiciones diferenciales. Asesoramos en la identificación y gestión de las alternativas más adecuadas según el destino de los fondos.</p>
+
+        <div class="instruments-grid">
+
+          <div class="instrument-card">
+            <div class="instrument-tag">Sistema Bancario</div>
+            <h4>Líneas de Inversión Productiva</h4>
+            <p>El Banco Central establece líneas de crédito específicas para inversión productiva destinadas a PyMES, con tasas subsidiadas o preferenciales. Estas líneas financian la adquisición de bienes de capital, construcción, habilitación y ampliación de instalaciones.</p>
+            <ul class="instrument-detail">
+              <li>Tasas reguladas inferiores al mercado libre</li>
+              <li>Plazos adecuados para proyectos de inversión (hasta 60 meses)</li>
+              <li>Financiamiento de hasta el 100% del proyecto en algunos casos</li>
+              <li>Disponibles en bancos públicos y privados de primera línea</li>
+            </ul>
+          </div>
+
+          <div class="instrument-card">
+            <div class="instrument-tag">Sistema Bancario</div>
+            <h4>Leasing Financiero</h4>
+            <p>El leasing es un contrato mediante el cual una empresa puede utilizar un bien (maquinaria, vehículo, equipamiento tecnológico, inmueble) durante un plazo determinado a cambio de cuotas periódicas, con opción de compra al finalizar. Es una alternativa eficiente para incorporar activos sin inmovilizar capital propio.</p>
+            <ul class="instrument-detail">
+              <li>Incorporación de activos sin desembolso inicial elevado</li>
+              <li>Las cuotas son deducibles como gasto en el impuesto a las ganancias</li>
+              <li>No afecta los límites de crédito bancario tradicionales</li>
+              <li>Opción de compra al valor residual al finalizar el contrato</li>
+              <li>Ideal para equipamiento, vehículos y tecnología</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="pymes-cta">
+      <div class="container">
+        <h3>¿Cuál es la herramienta adecuada para tu empresa?</h3>
+        <p>Cada PyME tiene necesidades distintas. Analizamos juntos el destino de los fondos, el plazo requerido y la situación financiera de tu empresa para identificar la alternativa más conveniente.</p>
+        <a href="mailto:contacto@fr-asesoria.com" class="btn btn-primary">Consultar sin compromiso</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+          <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+          <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+        </svg>
+        <span>FR Asesoría Financiera</span>
+      </div>
+      <p class="footer-legal">Idóneo en Mercado de Capitales — Comisión Nacional de Valores · Argentina</p>
+      <p class="footer-disclaimer">La información contenida en este sitio tiene carácter informativo y no constituye una oferta ni solicitud de compra o venta de valores. Las inversiones conllevan riesgos.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
