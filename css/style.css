@@ -174,3 +174,35 @@ body {
   .hero-divider { margin: 2rem auto; }
   .nav-links { display: none; }
 }
+/* AJUSTES PARA EL MENÚ MÓVIL (JS) */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        background: none;
+        border: none;
+        z-index: 1000;
+    }
+    .nav-toggle span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: var(--accent);
+        margin: 5px;
+        transition: 0.3s;
+    }
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        width: 70%;
+        background: var(--bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        box-shadow: -10px 0 20px rgba(0,0,0,0.1);
+    }
+    .nav-active { right: 0; }
+}
