@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acerca de mí | FR Asesoría Financiera</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="page-about">
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg class="logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+          <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+        </svg>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html" class="active">Acerca de mí</a></li>
+        <li><a href="personas.html">Asesoría Personal</a></li>
+        <li><a href="pymes.html">PyMES</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container">
+        <p class="section-label">Quién soy</p>
+        <h2 class="page-title">Acerca de mí</h2>
+      </div>
+    </section>
+
+    <!-- BIO -->
+    <section class="about-bio">
+      <div class="container about-grid">
+        <div class="about-photo-col">
+          <div class="about-photo-frame">
+            <div class="photo-placeholder about-ph">
+              <svg viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
+                <rect width="240" height="300" fill="var(--surface)"/>
+                <circle cx="120" cy="100" r="48" fill="var(--border)"/>
+                <ellipse cx="120" cy="220" rx="72" ry="56" fill="var(--border)"/>
+                <text x="120" y="278" text-anchor="middle" font-family="Jost" font-size="11" fill="var(--muted)" letter-spacing="2">FOTO</text>
+              </svg>
+            </div>
+          </div>
+          <div class="about-credential-box">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+              <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+              <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+              <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+            </svg>
+            <div>
+              <p class="cred-name">Federico R.</p>
+              <p class="cred-title">Asesor Financiero Matriculado CNV</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text-col">
+          <h3 class="about-subtitle">Un camino poco convencional hacia las finanzas</h3>
+          <p>Soy Médico Veterinario con más de 15 años de ejercicio profesional. Durante ese tiempo, como cualquier profesional independiente, me enfrenté a la necesidad de cuidar mis ahorros y proteger el fruto de años de trabajo.</p>
+          <p>Esa inquietud me llevó a adentrarme en el mundo de las inversiones, donde encontré una nueva pasión. Lo que comenzó como una necesidad personal se convirtió en una vocación: entender los mercados, aprender sobre instrumentos financieros y construir estrategias que realmente funcionen.</p>
+          <p>A partir de ese momento, decidí formarme de manera rigurosa para poder brindar estas experiencias y conocimientos a otras personas, acompañándolas en el camino de hacer crecer y preservar su capital.</p>
+
+          <div class="about-divider"></div>
+
+          <h3 class="about-subtitle">Formación académica y profesional</h3>
+
+          <div class="formation-list">
+            <div class="formation-item">
+              <div class="formation-year">2024</div>
+              <div class="formation-content">
+                <p class="formation-title">Idóneo en Mercado de Capitales — <strong>Comisión Nacional de Valores (CNV)</strong></p>
+                <p class="formation-desc">Examen oficial aprobado en abril 2025 para operar como asesor habilitado en el mercado de capitales argentino.</p>
+              </div>
+            </div>
+            <div class="formation-item">
+              <div class="formation-year">En curso</div>
+              <div class="formation-content">
+                <p class="formation-title">Analista Universitario de Datos — <strong>CNV</strong></p>
+                <p class="formation-desc">Carrera universitaria en curso, orientada al análisis cuantitativo de datos financieros y de mercados.</p>
+              </div>
+            </div>
+            <div class="formation-item">
+              <div class="formation-year">ICB</div>
+              <div class="formation-content">
+                <p class="formation-title">Curso AGI — <strong>Instituto de Capacitación Bursátil</strong></p>
+                <p class="formation-desc">Formación especializada en gestión e inversión en mercados financieros.</p>
+              </div>
+            </div>
+            <div class="formation-item">
+              <div class="formation-year">UNLU</div>
+              <div class="formation-content">
+                <p class="formation-title">Python para Finanzas — <strong>Universidad Nacional de Luján</strong></p>
+                <p class="formation-desc">Programación aplicada al análisis y automatización de estrategias financieras.</p>
+              </div>
+            </div>
+            <div class="formation-item">
+              <div class="formation-year">+</div>
+              <div class="formation-content">
+                <p class="formation-title">Manejo de Derivados Financieros</p>
+                <p class="formation-desc">Instrumentos derivados: opciones, futuros y estrategias de cobertura.</p>
+              </div>
+            </div>
+            <div class="formation-item">
+              <div class="formation-year">+</div>
+              <div class="formation-content">
+                <p class="formation-title">Financiamiento PyMES</p>
+                <p class="formation-desc">Herramientas de acceso al crédito y capital para pequeñas y medianas empresas a través del mercado de capitales y el sistema bancario.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values">
+      <div class="container">
+        <p class="section-label">Mi enfoque</p>
+        <div class="values-grid">
+          <div class="value-item">
+            <h4>Preservación del capital</h4>
+            <p>El primer objetivo siempre es no perder. Construir sobre bases sólidas antes de buscar rendimientos excepcionales.</p>
+          </div>
+          <div class="value-item">
+            <h4>Estrategia personalizada</h4>
+            <p>No existen carteras universales. Cada inversor tiene objetivos, tiempos y tolerancias al riesgo diferentes.</p>
+          </div>
+          <div class="value-item">
+            <h4>Educación financiera</h4>
+            <p>Asesorar no es decidir por el cliente, sino darle las herramientas para tomar decisiones informadas y conscientes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+          <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+          <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+        </svg>
+        <span>FR Asesoría Financiera</span>
+      </div>
+      <p class="footer-legal">Idóneo en Mercado de Capitales — Comisión Nacional de Valores · Argentina</p>
+      <p class="footer-disclaimer">La información contenida en este sitio tiene carácter informativo y no constituye una oferta ni solicitud de compra o venta de valores. Las inversiones conllevan riesgos.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
