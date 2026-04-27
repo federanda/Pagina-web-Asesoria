@@ -206,3 +206,89 @@ body {
     }
     .nav-active { right: 0; }
 }
+/* ESTILOS ESPECÍFICOS PARA ACERCA DE MÍ */
+.page-header {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: var(--surface);
+}
+.page-title {
+  font-family: var(--cormorant);
+  font-size: 3.5rem;
+  color: var(--accent);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 4rem;
+  padding: 5rem 2rem;
+  align-items: start;
+}
+
+.about-photo-frame {
+  border: 1px solid var(--border);
+  padding: 1rem;
+  background: white;
+}
+
+.about-credential-box {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-left: 3px solid var(--secondary);
+}
+
+.cred-name { font-weight: 600; color: var(--accent); }
+.cred-title { font-size: 0.8rem; color: var(--muted); }
+
+.about-subtitle {
+  font-family: var(--cormorant);
+  font-size: 2rem;
+  color: var(--accent);
+  margin: 2rem 0 1.5rem;
+}
+
+.about-text-col p { margin-bottom: 1.5rem; color: var(--text); }
+
+/* LISTA DE FORMACIÓN */
+.formation-list { margin-top: 2rem; }
+.formation-item {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.formation-year {
+  font-weight: 600;
+  color: var(--secondary);
+  min-width: 80px;
+}
+.formation-title { font-weight: 500; color: var(--accent); }
+.formation-desc { font-size: 0.9rem; color: var(--muted); margin-top: 0.3rem; }
+
+/* SECCIÓN VALORES */
+.values { background: var(--accent); color: white; padding: 5rem 2rem; }
+.values .section-label { color: var(--secondary); }
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+.value-item h4 {
+  font-family: var(--cormorant);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+}
+
+/* RESPONSIVE ACERCA DE MÍ */
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .page-title { font-size: 2.5rem; }
+}
