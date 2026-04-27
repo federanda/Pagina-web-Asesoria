@@ -292,3 +292,17 @@ body {
   .about-grid { grid-template-columns: 1fr; }
   .page-title { font-size: 2.5rem; }
 }
+/* Asegura que la foto de perfil se vea profesional */
+.about-photo {
+  width: 100%;
+  height: 400px;      /* Altura fija para mantener uniformidad */
+  display: block;
+  object-fit: cover;  /* Ajusta la imagen al marco sin deformarla */
+  object-position: center top; /* Centra la cara si la foto es vertical */
+  filter: grayscale(20%) contrast(1.05); /* Toque mate sofisticado */
+  transition: filter 0.3s ease;
+}
+
+.about-photo:hover {
+  filter: grayscale(0%) contrast(1.05); /* Recupera color al pasar el mouse */
+}
