@@ -1,13 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asesoría Financiera</title>
-    <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FR Asesoría Financiera | Federico R.</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Bienvenido a mi sitio de Asesoría</h1>
-    <p>Página en construcción.</p>
+<body class="page-home">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg class="logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <rect width="64" height="64" fill="none"/>
+          <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+          <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+        </svg>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="about.html">Acerca de mí</a></li>
+        <li><a href="personas.html">Asesoría Personal</a></li>
+        <li><a href="pymes.html">PyMES</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Asesor Financiero Matriculado</p>
+        <h1 class="hero-name">Federico<br><span>R.</span></h1>
+        <p class="hero-credential">Idóneo en Mercado de Capitales<br><span class="cnv-badge">Comisión Nacional de Valores</span></p>
+        <div class="hero-divider"></div>
+        <p class="hero-tagline">Inversiones con propósito.<br>Capital con estrategia.</p>
+        <div class="hero-cta">
+          <a href="personas.html" class="btn btn-primary">Asesoría Personal</a>
+          <a href="pymes.html" class="btn btn-ghost">Soluciones PyMES</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-frame">
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="240" fill="var(--surface)"/>
+              <circle cx="100" cy="85" r="38" fill="var(--border)"/>
+              <ellipse cx="100" cy="180" rx="58" ry="44" fill="var(--border)"/>
+              <text x="100" y="220" text-anchor="middle" font-family="Jost" font-size="11" fill="var(--muted)" letter-spacing="2">FOTO</text>
+            </svg>
+          </div>
+          <div class="photo-badge">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" width="52" height="52">
+              <rect x="2" y="2" width="60" height="60" rx="2" fill="var(--bg)" stroke="var(--accent)" stroke-width="1.5"/>
+              <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+              <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS RESUMEN -->
+  <section class="services-preview">
+    <div class="container">
+      <p class="section-label">Servicios</p>
+      <div class="services-grid">
+        <a href="personas.html" class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 4C12.13 4 9 7.13 9 11s3.13 7 7 7 7-3.13 7-7-3.13-7-7-7zm0 18c-4.67 0-14 2.34-14 7v1h28v-1c0-4.66-9.33-7-14-7z" fill="var(--accent)" opacity="0.7"/>
+            </svg>
+          </div>
+          <h3>Inversores Particulares</h3>
+          <p>Carteras diseñadas según tu perfil de riesgo, horizonte temporal y objetivos financieros.</p>
+          <span class="card-link">Ver más →</span>
+        </a>
+        <a href="pymes.html" class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="10" width="26" height="18" rx="1" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+              <path d="M10 10V7a6 6 0 0112 0v3" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+              <circle cx="16" cy="19" r="2" fill="var(--accent)" opacity="0.7"/>
+            </svg>
+          </div>
+          <h3>Financiamiento PyMES</h3>
+          <p>Herramientas del mercado de capitales y bancario para potenciar el crecimiento de tu empresa.</p>
+          <span class="card-link">Ver más →</span>
+        </a>
+        <a href="about.html" class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M28 6H4a2 2 0 00-2 2v16a2 2 0 002 2h24a2 2 0 002-2V8a2 2 0 00-2-2z" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+              <path d="M8 12h16M8 16h12M8 20h8" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            </svg>
+          </div>
+          <h3>Mi Trayectoria</h3>
+          <p>Formación sólida en mercados financieros, derivados, análisis de datos y mercado de capitales.</p>
+          <span class="card-link">Ver más →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+          <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+          <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+        </svg>
+        <span>FR Asesoría Financiera</span>
+      </div>
+      <p class="footer-legal">Idóneo en Mercado de Capitales — Comisión Nacional de Valores · Argentina</p>
+      <p class="footer-disclaimer">La información contenida en este sitio tiene carácter informativo y no constituye una oferta ni solicitud de compra o venta de valores. Las inversiones conllevan riesgos.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
