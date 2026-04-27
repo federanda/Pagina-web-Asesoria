@@ -306,3 +306,40 @@ body {
 .about-photo:hover {
   filter: grayscale(0%) contrast(1.05); /* Recupera color al pasar el mouse */
 }
+/* ESTILOS PARA LA FOTO EN EL INICIO */
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-frame {
+  position: relative;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  background: white;
+  box-shadow: 20px 20px 0px var(--surface); /* Efecto decorativo mate */
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 350px; /* Tamaño ideal para el inicio */
+  height: auto;
+  display: block;
+  filter: saturate(0.8); /* Un poco menos de saturación para el look mate */
+  transition: all 0.5s ease;
+}
+
+.hero-img:hover {
+  filter: saturate(1);
+  transform: scale(1.02);
+}
+
+/* Ajuste responsive para móviles */
+@media (max-width: 768px) {
+  .hero-image-frame {
+    max-width: 280px;
+    margin-top: 3rem;
+    box-shadow: 10px 10px 0px var(--surface);
+  }
+}
