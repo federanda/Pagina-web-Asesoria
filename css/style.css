@@ -516,3 +516,65 @@ body {
     #quiz-box { padding: 2rem 1.5rem; }
     .grid-carteras { padding: 0 1rem; }
 }
+<header class="page-header">
+  <div class="container">
+    <p class="hero-eyebrow">Asesoría Particular</p>
+    <h1 class="page-title">Perfil de Inversor</h1>
+    <p class="page-subtitle">Descubrí tu tolerancia al riesgo y conocé nuestros modelos de cartera diseñados para el mercado local y del exterior.</p>
+  </div>
+</header>
+
+<section class="portfolios-simple">
+  <div class="container">
+    <div class="section-label">Modelos Sugeridos</div>
+    <div class="grid-carteras">
+      <div class="card">
+        <h3>Conservador</h3>
+        <p><strong>Objetivo:</strong> Preservación</p>
+        <ul>
+          <li>FCI Money Market</li>
+          <li>Plazo Fijo UVA / LECAPS</li>
+          <li>ONs Ley Local (Dólar MEP)</li>
+        </ul>
+      </div>
+
+      <div class="card active">
+        <h3>Moderado</h3>
+        <p><strong>Objetivo:</strong> Crecimiento con balance</p>
+        <ul>
+          <li>Bonos CER (TX26/TX28)</li>
+          <li>CEDEARs de Índices (SPY/DIA)</li>
+          <li>Obligaciones Negociables Hard Dollar</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Agresivo</h3>
+        <p><strong>Objetivo:</strong> Máximo Retorno</p>
+        <ul>
+          <li>Acciones Merval (PAMP, YPF, GGAL)</li>
+          <li>CEDEARs Tech (NVDA, TSLA)</li>
+          <li>Futuros y Opciones</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="test-perfil">
+  <div class="container">
+    <div class="section-label">Comenzar Evaluación</div>
+    <div id="quiz-box">
+      <h3 id="pregunta-texto">Cargando pregunta...</h3>
+      <div id="opciones-container"></div>
+      <p id="contador">Pregunta 1 de 15</p>
+    </div>
+    <div id="resultado-box" style="display:none;">
+      <h3>Tu perfil es: <span id="perfil-nombre"></span></h3>
+      <p id="perfil-desc"></p>
+      <button onclick="location.reload()" class="btn btn-primary">Realizar el test nuevamente</button>
+    </div>
+  </div>
+</section>
+
+<script src="js/test.js"></script>
