@@ -344,53 +344,113 @@ body {
   }
 }
 /* Contenedor del Test */
-#quiz-box {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    max-width: 700px;
-    margin: 50px auto;
+/* =========================================
+   SISTEMA DE TEST Y CARTERAS (OPTIMIZADO)
+   ========================================= */
+
+/* Contenedor principal del Test */
+#quiz-box, #resultado-box {
+    background: white;
+    padding: 3rem;
+    border-radius: 2px; /* Mantengo la estética recta y elegante */
+    border: 1px solid var(--border);
+    box-shadow: 15px 15px 0px var(--surface); /* Siguiendo el estilo de tu Hero */
+    max-width: 750px;
+    margin: 4rem auto;
     text-align: center;
 }
 
-/* Botones de opciones */
+/* Pregunta */
+#pregunta-texto {
+    font-family: var(--cormorant);
+    font-size: 2.2rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+/* Botones de opciones del Test */
 .btn-opcion {
     display: block;
     width: 100%;
-    padding: 18px;
-    margin: 12px 0;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    background: #fff;
-    font-family: 'Jost', sans-serif;
+    padding: 1.2rem;
+    margin: 1rem 0;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    font-family: var(--jost);
+    font-size: 0.95rem;
+    color: var(--text);
     cursor: pointer;
     transition: all 0.3s ease;
-    text-align: left;
+    text-align: center; /* Centrado queda más prolijo para asesoría */
 }
 
 .btn-opcion:hover {
-    border-color: #000; /* O tu color de acento */
-    background: #fdfdfd;
-    transform: translateY(-2px);
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: translateY(-3px);
 }
 
-/* Grid de carteras simplificado */
+/* Grid de Carteras Sugeridas */
 .grid-carteras {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin: 40px 0;
+    gap: 2rem;
+    margin: 3rem 0;
 }
 
 .card {
-    padding: 30px;
-    border: 1px solid #eee;
-    border-radius: 12px;
-    transition: 0.3s;
+    background: white;
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    transition: all 0.4s ease;
+    text-align: left;
+}
+
+.card h3 {
+    font-family: var(--cormorant);
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.card ul {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.card ul li {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+/* Viñeta elegante estilo mate */
+.card ul li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
 }
 
 .card.active {
-    border: 2px solid var(--accent); /* Resalta la moderada por defecto */
-    transform: scale(1.02);
+    border: 1px solid var(--secondary);
+    background: var(--surface);
+    transform: translateY(-5px);
+}
+
+/* Resultados finales */
+#perfil-nombre {
+    color: var(--secondary);
+    font-family: var(--cormorant);
+    font-size: 3rem;
+    display: block;
+    margin: 1rem 0;
+}
+
+#perfil-desc {
+    margin-bottom: 2rem;
+    color: var(--text);
 }
