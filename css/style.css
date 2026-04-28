@@ -343,3 +343,54 @@ body {
     box-shadow: 10px 10px 0px var(--surface);
   }
 }
+/* Contenedor del Test */
+#quiz-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Botones de opciones */
+.btn-opcion {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    margin: 12px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #fff;
+    font-family: 'Jost', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.btn-opcion:hover {
+    border-color: #000; /* O tu color de acento */
+    background: #fdfdfd;
+    transform: translateY(-2px);
+}
+
+/* Grid de carteras simplificado */
+.grid-carteras {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.card {
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card.active {
+    border: 2px solid var(--accent); /* Resalta la moderada por defecto */
+    transform: scale(1.02);
+}
