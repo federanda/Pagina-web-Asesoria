@@ -1,200 +1,51 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Asesoría Personal | FR Asesoría Financiera</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
-</head>
-<body class="page-personas">
+<section class="portfolios-simple">
+  <div class="container">
+    <h2>Modelos de Cartera</h2>
+    <div class="grid-carteras">
+      <div class="card">
+        <h3>Conservador</h3>
+        <p><strong>Objetivo:</strong> Preservación</p>
+        <ul>
+          <li>FCI Money Market</li>
+          <li>Plazo Fijo UVA / LECAPS</li>
+          <li>ONs Ley Local (Dólar MEP)</li>
+        </ul>
+      </div>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <svg class="logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
-          <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
-          <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
-        </svg>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Acerca de mí</a></li>
-        <li><a href="personas.html" class="active">Asesoría Personal</a></li>
-        <li><a href="pymes.html">PyMES</a></li>
-      </ul>
-      <button class="nav-toggle" aria-label="Menú">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="card active">
+        <h3>Moderado</h3>
+        <p><strong>Objetivo:</strong> Crecimiento con balance</p>
+        <ul>
+          <li>Bonos CER (TX26/TX28)</li>
+          <li>CEDEARs de Índices (SPY/DIA)</li>
+          <li>Obligaciones Negociables Hard Dollar</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Agresivo</h3>
+        <p><strong>Objetivo:</strong> Máximo Retorno</p>
+        <ul>
+          <li>Acciones Merval (PAMP, YPF, GGAL)</li>
+          <li>CEDEARs Tech (NVDA, TSLA)</li>
+          <li>Futuros y Opciones</li>
+        </ul>
+      </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <main>
-    <section class="page-header">
-      <div class="container">
-        <p class="section-label">Inversores particulares</p>
-        <h2 class="page-title">Asesoría Personalizada</h2>
-        <p class="page-subtitle">Cada decisión de inversión comienza por conocerte. Tu horizonte, tus objetivos y tu tolerancia al riesgo definen la estrategia.</p>
-      </div>
-    </section>
-
-    <!-- CARTERAS -->
-    <section class="portfolios">
-      <div class="container">
-        <p class="section-label">Tipos de cartera</p>
-        <div class="portfolio-grid">
-
-          <div class="portfolio-card conservative">
-            <div class="portfolio-header">
-              <div class="risk-indicator">
-                <span class="dot"></span><span class="dot"></span><span class="dot-off"></span>
-              </div>
-              <h3>Conservador</h3>
-              <p class="portfolio-target">Preservación del capital · Baja volatilidad</p>
-            </div>
-            <div class="portfolio-body">
-              <p>Ideal para quienes priorizan la seguridad del capital por sobre el rendimiento. Horizonte de corto a mediano plazo.</p>
-              <ul class="asset-list">
-                <li>
-                  <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="var(--accent)"/></svg>
-                  Fondos Comunes de Inversión (FCI) money market y renta fija
-                </li>
-                <li>
-                  <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="var(--accent)"/></svg>
-                  CEDEARs de índices (S&P 500, Nasdaq)
-                </li>
-                <li>
-                  <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="var(--accent)"/></svg>
-                  Obligaciones Negociables (ON) corporativas
-                </li>
-                <li>
-                  <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="var(--accent)"/></svg>
-                  Renta fija soberana y subsoberana
-                </li>
-                <li>
-                  <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="var(--accent)"/></svg>
-                  Plazo fijo (tradicional y UVA)
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="portfolio-card moderate">
-            <div class="portfolio-header">
-              <div class="risk-indicator">
-                <span class="dot"></span><span class="dot"></span><span class="dot-half"></span>
-              </div>
-              <h3>Moderado</h3>
-              <p class="portfolio-target">Crecimiento equilibrado · Mediana volatilidad</p>
-            </div>
-            <div class="portfolio-body">
-              <p>Balance entre rendimiento y seguridad. Adecuado para objetivos de mediano a largo plazo con tolerancia moderada al riesgo.</p>
-              <ul class="asset-list">
-                <li>
-                  <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="var(--accent)"/></svg>
-                  Bonos soberanos y corporativos (pesos y dólares)
-                </li>
-                <li>
-                  <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="var(--accent)"/></svg>
-                  Letras del Tesoro (LEDES, LECAP)
-                </li>
-                <li>
-                  <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="var(--accent)"/></svg>
-                  CEDEARs de empresas líderes globales
-                </li>
-                <li>
-                  <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="var(--accent)"/></svg>
-                  FCI de renta mixta y retorno total
-                </li>
-                <li>
-                  <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="var(--accent)"/></svg>
-                  Activos de cobertura cambiaria
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="portfolio-card aggressive">
-            <div class="portfolio-header">
-              <div class="risk-indicator">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-              </div>
-              <h3>Agresivo</h3>
-              <p class="portfolio-target">Máximo rendimiento · Alta volatilidad</p>
-            </div>
-            <div class="portfolio-body">
-              <p>Para inversores con experiencia, horizonte largo y alta tolerancia a la volatilidad. Mayor exposición a activos de riesgo con potencial de retorno superior.</p>
-              <ul class="asset-list">
-                <li>
-                  <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="var(--accent)"/></svg>
-                  Acciones locales (Merval) y globales
-                </li>
-                <li>
-                  <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="var(--accent)"/></svg>
-                  CEDEARs de acciones individuales
-                </li>
-                <li>
-                  <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="var(--accent)"/></svg>
-                  Activos cripto (Bitcoin, Ethereum y principales)
-                </li>
-                <li>
-                  <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="var(--accent)"/></svg>
-                  Opciones financieras (estrategias de cobertura y especulación)
-                </li>
-                <li>
-                  <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="var(--accent)"/></svg>
-                  Contratos de futuros (índices, divisas, commodities)
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TEST -->
-    <section class="test-section" id="test-perfil">
-      <div class="container">
-        <p class="section-label">Descubrí tu perfil</p>
-        <h3 class="section-title">Test de Perfil de Inversor</h3>
-        <p class="section-desc">Respondé las siguientes 15 preguntas con honestidad. Al finalizar, obtendrás tu perfil de riesgo y las recomendaciones de cartera correspondientes.</p>
-
-        <div class="test-wrapper">
-          <div id="test-container">
-            <div class="test-progress">
-              <div class="progress-bar"><div id="progress-fill" style="width:0%"></div></div>
-              <span id="progress-text">Pregunta 1 de 15</span>
-            </div>
-            <div id="question-area"></div>
-            <div class="test-nav">
-              <button id="btn-prev" class="btn btn-ghost" onclick="prevQuestion()" style="visibility:hidden">Anterior</button>
-              <button id="btn-next" class="btn btn-primary" onclick="nextQuestion()">Siguiente</button>
-            </div>
-          </div>
-          <div id="result-area" style="display:none"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-logo">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
-          <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
-          <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
-          <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
-        </svg>
-        <span>FR Asesoría Financiera</span>
-      </div>
-      <p class="footer-legal">Idóneo en Mercado de Capitales — Comisión Nacional de Valores · Argentina</p>
-      <p class="footer-disclaimer">La información contenida en este sitio tiene carácter informativo y no constituye una oferta ni solicitud de compra o venta de valores. Las inversiones conllevan riesgos.</p>
+<section id="test-perfil">
+  <div class="container">
+    <div id="quiz-box">
+      <h3 id="pregunta-texto">Cargando pregunta...</h3>
+      <div id="opciones-container"></div>
+      <p id="contador">Pregunta 1 de 15</p>
     </div>
-  </footer>
-
-  <script src="js/test.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
+    <div id="resultado-box" style="display:none;">
+      <h3>Tu perfil es: <span id="perfil-nombre"></span></h3>
+      <p id="perfil-desc"></p>
+      <button onclick="location.reload()">Reiniciar Test</button>
+    </div>
+  </div>
+</section>
