@@ -343,66 +343,50 @@ body {
     box-shadow: 10px 10px 0px var(--surface);
   }
 }
-/* Contenedor del Test */
 /* =========================================
-   SISTEMA DE TEST Y CARTERAS (OPTIMIZADO)
+   ESTILOS INTEGRALES: SECCIÓN PERSONAS
    ========================================= */
 
-/* Contenedor principal del Test */
-#quiz-box, #resultado-box {
-    background: white;
-    padding: 3rem;
-    border-radius: 2px; /* Mantengo la estética recta y elegante */
-    border: 1px solid var(--border);
-    box-shadow: 15px 15px 0px var(--surface); /* Siguiendo el estilo de tu Hero */
-    max-width: 750px;
-    margin: 4rem auto;
+/* 1. Encabezado de Página (Título y Subtítulo) */
+.page-header {
+    padding: 6rem 2rem 4rem;
     text-align: center;
+    background-color: var(--surface);
 }
 
-/* Pregunta */
-#pregunta-texto {
+.page-title {
     font-family: var(--cormorant);
-    font-size: 2.2rem;
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
     color: var(--accent);
-    margin-bottom: 2rem;
-    line-height: 1.2;
-}
-
-/* Botones de opciones del Test */
-.btn-opcion {
-    display: block;
-    width: 100%;
-    padding: 1.2rem;
     margin: 1rem 0;
-    border: 1px solid var(--border);
-    background: var(--bg);
+    line-height: 1.1;
+}
+
+.page-subtitle {
+    max-width: 750px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1.1rem;
     font-family: var(--jost);
-    font-size: 0.95rem;
-    color: var(--text);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: center; /* Centrado queda más prolijo para asesoría */
 }
 
-.btn-opcion:hover {
-    background: var(--accent);
-    color: white;
-    border-color: var(--accent);
-    transform: translateY(-3px);
+/* 2. Grid de Modelos de Cartera */
+.portfolios-simple {
+    padding: 5rem 2rem;
 }
 
-/* Grid de Carteras Sugeridas */
 .grid-carteras {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin: 3rem 0;
+    max-width: 1100px;
+    margin: 3rem auto 0;
 }
 
+/* Tarjetas de Inversión */
 .card {
     background: white;
-    padding: 2.5rem;
+    padding: 3rem 2rem;
     border: 1px solid var(--border);
     transition: all 0.4s ease;
     text-align: left;
@@ -410,47 +394,125 @@ body {
 
 .card h3 {
     font-family: var(--cormorant);
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--accent);
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.card p strong {
+    color: var(--secondary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .card ul {
     list-style: none;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--bg);
+    padding-top: 1.5rem;
 }
 
 .card ul li {
-    font-size: 0.9rem;
-    margin-bottom: 0.8rem;
-    padding-left: 1.2rem;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+    padding-left: 1.5rem;
     position: relative;
 }
 
-/* Viñeta elegante estilo mate */
+/* Viñeta minimalista estilo mate */
 .card ul li::before {
     content: "—";
     position: absolute;
     left: 0;
     color: var(--secondary);
+    font-weight: bold;
 }
 
+/* Resalte para la cartera moderada (clase .active) */
 .card.active {
-    border: 1px solid var(--secondary);
+    border-color: var(--secondary);
     background: var(--surface);
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 15px 15px 0px rgba(140, 120, 81, 0.1);
 }
 
-/* Resultados finales */
-#perfil-nombre {
-    color: var(--secondary);
+/* 3. Sección del Test de Perfil */
+#test-perfil {
+    background-color: var(--bg);
+    padding: 6rem 2rem;
+    border-top: 1px solid var(--border);
+}
+
+#quiz-box, #resultado-box {
+    background: white;
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid var(--border);
+    box-shadow: 20px 20px 0px var(--surface); /* Tu sello visual */
+    text-align: center;
+}
+
+#pregunta-texto {
     font-family: var(--cormorant);
-    font-size: 3rem;
+    font-size: 2.2rem;
+    color: var(--accent);
+    margin-bottom: 2.5rem;
+    line-height: 1.2;
+}
+
+/* Botones de opciones del test */
+.btn-opcion {
     display: block;
-    margin: 1rem 0;
+    width: 100%;
+    padding: 1.2rem;
+    margin: 0.8rem 0;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    font-family: var(--jost);
+    font-size: 1rem;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: none; /* Evita que las respuestas salgan en mayúsculas */
+}
+
+.btn-opcion:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+/* Resultados y Contador */
+#contador {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+#perfil-nombre {
+    font-family: var(--cormorant);
+    font-size: 3.5rem;
+    color: var(--secondary);
+    display: block;
+    margin: 1.5rem 0;
 }
 
 #perfil-desc {
-    margin-bottom: 2rem;
-    color: var(--text);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ajuste Responsive */
+@media (max-width: 768px) {
+    .page-title { font-size: 2.8rem; }
+    #quiz-box { padding: 2rem 1.5rem; }
+    .grid-carteras { padding: 0 1rem; }
 }
