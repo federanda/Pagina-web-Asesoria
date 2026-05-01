@@ -602,3 +602,97 @@ body {
     margin-right: auto;
     line-height: 1.8;
 }
+/* =========================================
+   ESTILOS SECCIÓN CONTACTO
+   ========================================= */
+
+.contact-section {
+    padding: 6rem 2rem;
+    background-color: var(--bg);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Tarjeta de WhatsApp */
+.contact-method-card {
+    background: white;
+    padding: 3.5rem 2.5rem;
+    border: 1px solid var(--border);
+    box-shadow: 20px 20px 0px var(--surface);
+}
+
+.contact-method-card h3 {
+    font-family: var(--cormorant);
+    font-size: 2.2rem;
+    color: var(--accent);
+    margin: 1rem 0;
+}
+
+/* Contenedor del Formulario */
+.contact-form-container {
+    background: white;
+    padding: 3.5rem 2.5rem;
+    border: 1px solid var(--border);
+    box-shadow: 20px 20px 0px var(--surface);
+}
+
+.contact-form-container h3 {
+    font-family: var(--cormorant);
+    font-size: 2.2rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+}
+
+/* Estilos de Formulario */
+.main-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.main-form label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.main-form input, 
+.main-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    font-family: var(--jost);
+    font-size: 1rem;
+    color: var(--text);
+    transition: border-color 0.3s;
+}
+
+.main-form input:focus, 
+.main-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: white;
+}
+
+/* Ajuste Responsive */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .contact-method-card, 
+    .contact-form-container {
+        padding: 2.5rem 1.5rem;
+    }
+}
