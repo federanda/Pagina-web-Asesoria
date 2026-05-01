@@ -1,62 +1,115 @@
-<header class="page-header">
-  <div class="container">
-    <p class="hero-eyebrow">Asesoría Particular</p>
-    <h1 class="page-title">Perfil de Inversor</h1>
-    <p class="page-subtitle">Descubrí tu tolerancia al riesgo y conocé nuestros modelos de cartera diseñados para el mercado local y del exterior.</p>
-  </div>
-</header>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asesoría Personal | FR Asesoría Financiera</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="page-personas">
 
-<section class="portfolios-simple">
-  <div class="container">
-    <div class="section-label">Modelos Sugeridos</div>
-    <div class="grid-carteras">
-      <div class="card">
-        <h3>Conservador</h3>
-        <p><strong>Objetivo:</strong> Preservación</p>
-        <ul>
-          <li>FCI Money Market</li>
-          <li>Plazo Fijo UVA / LECAPS</li>
-          <li>ONs Ley Local (Dólar MEP)</li>
-        </ul>
-      </div>
-
-      <div class="card active">
-        <h3>Moderado</h3>
-        <p><strong>Objetivo:</strong> Crecimiento con balance</p>
-        <ul>
-          <li>Bonos CER (TX26/TX28)</li>
-          <li>CEDEARs de Índices (SPY/DIA)</li>
-          <li>Obligaciones Negociables Hard Dollar</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Agresivo</h3>
-        <p><strong>Objetivo:</strong> Máximo Retorno</p>
-        <ul>
-          <li>Acciones Merval (PAMP, YPF, GGAL)</li>
-          <li>CEDEARs Tech (NVDA, TSLA)</li>
-          <li>Futuros y Opciones</li>
-        </ul>
-      </div>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg class="logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+          <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+        </svg>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Acerca de mí</a></li>
+        <li><a href="personas.html" class="active">Asesoría Personal</a></li>
+        <li><a href="pymes.html">PyMES</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
-</section>
+  </nav>
 
-<section id="test-perfil">
-  <div class="container">
-    <div class="section-label">Comenzar Evaluación</div>
-    <div id="quiz-box">
-      <h3 id="pregunta-texto">Cargando pregunta...</h3>
-      <div id="opciones-container"></div>
-      <p id="contador">Pregunta 1 de 15</p>
-    </div>
-    <div id="resultado-box" style="display:none;">
-      <h3>Tu perfil es: <span id="perfil-nombre"></span></h3>
-      <p id="perfil-desc"></p>
-      <button onclick="location.reload()" class="btn btn-primary">Realizar el test nuevamente</button>
-    </div>
-  </div>
-</section>
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <p class="section-label">Asesoría Particular</p>
+        <h1 class="page-title">Perfil de Inversor</h1>
+        <p class="page-subtitle">Descubrí tu tolerancia al riesgo y conocé nuestros modelos de cartera diseñados para el mercado local y del exterior.</p>
+      </div>
+    </section>
 
-<script src="js/test.js"></script>
+    <section class="portfolios-simple">
+      <div class="container">
+        <div class="section-label">Modelos Sugeridos</div>
+        <div class="grid-carteras">
+          <div class="card">
+            <h3>Conservador</h3>
+            <p><strong>Objetivo:</strong> Preservación</p>
+            <ul>
+              <li>FCI Money Market</li>
+              <li>Plazo Fijo UVA / LECAPS</li>
+              <li>ONs Ley Local (Dólar MEP)</li>
+            </ul>
+          </div>
+
+          <div class="card active">
+            <h3>Moderado</h3>
+            <p><strong>Objetivo:</strong> Crecimiento con balance</p>
+            <ul>
+              <li>Bonos CER (TX26/TX28)</li>
+              <li>CEDEARs de Índices (SPY/DIA)</li>
+              <li>Obligaciones Negociables Hard Dollar</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Agresivo</h3>
+            <p><strong>Objetivo:</strong> Máximo Retorno</p>
+            <ul>
+              <li>Acciones Merval (PAMP, YPF, GGAL)</li>
+              <li>CEDEARs Tech (NVDA, TSLA)</li>
+              <li>Futuros y Opciones</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="test-perfil">
+      <div class="container">
+        <div class="section-label">Comenzar Evaluación</div>
+        <div id="quiz-box">
+          <h3 id="pregunta-texto">Cargando pregunta...</h3>
+          <div id="opciones-container"></div>
+          <p id="contador">Pregunta 1 de 15</p>
+        </div>
+        <div id="resultado-box" style="display:none;">
+          <h3>Tu perfil es: <span id="perfil-nombre"></span></h3>
+          <p id="perfil-desc"></p>
+          <button onclick="location.reload()" class="btn btn-primary">Realizar el test nuevamente</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+          <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+          <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+        </svg>
+        <span>FR Asesoría Financiera</span>
+      </div>
+      <p class="footer-legal">Idóneo en Mercado de Capitales — Comisión Nacional de Valores · Argentina</p>
+      <p class="footer-disclaimer">La información contenida en este sitio tiene carácter informativo y no constituye una oferta ni solicitud de compra o venta de valores. Las inversiones conllevan riesgos.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/test.js"></script>
+</body>
+</html>
