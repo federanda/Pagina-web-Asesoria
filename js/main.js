@@ -33,3 +33,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+            // Esto añade o quita la clase que mueve el menú
+            navLinks.classList.toggle('nav-active');
+            
+            // Esto es opcional por si quieres animar las rayitas
+            navToggle.classList.toggle('toggle-open');
+        });
+    }
+
+    // Cerrar el menú si se hace clic en un enlace (importante en móviles)
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('nav-active');
+        });
+    });
+});
