@@ -1,7 +1,7 @@
 /* PALETA MATE ACTUALIZADA: GRIS MÁS PROFUNDO, VERDE BOSQUE Y TIERRA */
 :root {
-  --bg: #cbcbc2;
-  --surface: #bcbcb3;      /* Gris cemento más definido */
+  --bg: #e2e2de;           /* Gris piedra más profundo */
+  --surface: #d8d8d1;      /* Gris cemento más definido */
   --text: #2d2d2a;         /* Carbón mate */
   --muted: #6b6f69;        /* Gris verdoso más oscuro para contraste */
   --accent: #3e4a3d;       /* Verde bosque profundo (mate) */
