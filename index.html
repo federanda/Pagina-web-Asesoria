@@ -11,33 +11,40 @@
 <body class="page-home">
 
   <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <!-- 1. Botón único con ID -->
-      <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
-          <span></span>
-          <span></span>
-          <span></span>
-      </button>
+  <!-- ════════════════════════════════════════════════════════════════
+     NAV UNIFICADO — pegar en TODAS las páginas (index, about,
+     personas, pymes, costos, contacto).
+     Cambiá la clase "active" al link que corresponda a cada página.
+     ════════════════════════════════════════════════════════════════ -->
 
-      <a href="index.html" class="nav-logo">
-        <!-- Tu SVG del logo queda igual -->
-        <svg class="logo-svg" ... > ... </svg>
-      </a>
+<nav class="nav">
+  <div class="nav-inner">
 
-      <!-- 2. Agregamos id="nav-links" a la lista -->
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="active">Inicio</a></li>
-        <li><a href="about.html">Acerca de mí</a></li>
-        <li><a href="personas.html">Asesoría Personal</a></li>
-        <li><a href="pymes.html">PyMES</a></li>
-        <li><a href="costos.html">Costos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-      
-      <!-- ELIMINAMOS EL SEGUNDO BOTÓN QUE ESTABA AQUÍ -->
-    </div>
-  </nav>
+    <a href="index.html" class="nav-logo">
+      <svg class="logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+        <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+      </svg>
+    </a>
+
+    <!-- Todas las páginas en todos los navs -->
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="about.html">Acerca de mí</a></li>
+      <li><a href="personas.html">Asesoría Personal</a></li>
+      <li><a href="pymes.html">PyMES</a></li>
+      <li><a href="costos.html">Costos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <!-- Botón hamburguesa (debe estar DESPUÉS de nav-links en el HTML) -->
+    <button class="nav-toggle" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
 
   <!-- HERO -->
  <section class="hero">
