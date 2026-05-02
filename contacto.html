@@ -9,44 +9,32 @@
 </head>
 <body>
 
-    <!-- ════════════════════════════════════════════════════════════════
-     NAV UNIFICADO — pegar en TODAS las páginas (index, about,
-     personas, pymes, costos, contacto).
-     Cambiá la clase "active" al link que corresponda a cada página.
-     ════════════════════════════════════════════════════════════════ -->
-
-<nav class="nav">
-  <div class="nav-inner">
-
-    <a href="index.html" class="nav-logo">
-      <svg class="logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
-        <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
-        <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
-      </svg>
-    </a>
-
-    <!-- Todas las páginas en todos los navs -->
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="about.html">Acerca de mí</a></li>
-      <li><a href="personas.html">Asesoría Personal</a></li>
-      <li><a href="pymes.html">PyMES</a></li>
-      <li><a href="costos.html">Costos</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-
-    <!-- Botón hamburguesa (debe estar DESPUÉS de nav-links en el HTML) -->
-    <button class="nav-toggle" aria-label="Menú">
-      <span></span><span></span><span></span>
-    </button>
-
-  </div>
-</nav>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+                    <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+                    <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+                </svg>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Acerca de mí</a></li>
+                <li><a href="personas.html">Asesoría Personal</a></li>
+                <li><a href="pymes.html">PyMES</a></li>
+                <li><a href="costos.html">Costos</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
 
     <header class="page-header">
         <div class="container">
-            <p class="hero-eyebrow">Canales Directos</p>
+            <p class="section-label">Canales Directos</p>
             <h1 class="page-title">Iniciemos una conversación</h1>
             <p class="page-subtitle">Elegí el medio que prefieras para coordinar una reunión o despejar dudas específicas.</p>
         </div>
@@ -55,22 +43,19 @@
     <section class="contact-section">
         <div class="container">
             <div class="contact-grid">
-                
-                <!-- Columna Izquierda: WhatsApp Directo -->
+
                 <div class="contact-method-card">
-                    <p class="hero-eyebrow">Mensajería Inmediata</p>
+                    <p class="section-label">Mensajería Inmediata</p>
                     <h3>WhatsApp</h3>
                     <p>Ideal para consultas rápidas o coordinar una llamada breve.</p>
-                    <a href="https://wa.me/5492323579094?text=Hola%20Federico,%20solicito%20información%20sobre%20asesoría%20financiera" class="btn btn-primary" style="margin-top: 2rem; width: 100%; text-align: center; text-decoration: none;">
+                    <a href="https://wa.me/5492323579094?text=Hola%20Federico,%20solicito%20información%20sobre%20asesoría%20financiera" class="btn btn-primary" style="margin-top: 2rem; display: block; text-align: center; text-decoration: none;">
                         Enviar Mensaje
                     </a>
                 </div>
 
-                <!-- Columna Derecha: Formulario de Mail (TU CÓDIGO CORREGIDO) -->
                 <div class="contact-form-container">
-                    <p class="hero-eyebrow">Consulta Detallada</p>
+                    <p class="section-label">Consulta Detallada</p>
                     <h3>Formulario de Contacto</h3>
-                    
                     <form action="https://formspree.io/f/xaqvnyoy" method="POST" class="main-form">
                         <div class="form-group">
                             <label>Nombre Completo</label>
@@ -93,9 +78,20 @@
     </section>
 
     <footer class="footer">
-        <div class="footer-logo">Federico <span>Randazzo</span></div>
-        <p class="footer-disclaimer">Agente Productor Certificado CNV.</p>
+        <div class="container footer-inner">
+            <div class="footer-logo">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                    <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+                    <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+                    <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+                </svg>
+                <span>FR Asesoría Financiera</span>
+            </div>
+            <p class="footer-legal">Idóneo en Mercado de Capitales — Comisión Nacional de Valores · Argentina</p>
+            <p class="footer-disclaimer">La información contenida en este sitio tiene carácter informativo y no constituye una oferta ni solicitud de compra o venta de valores. Las inversiones conllevan riesgos.</p>
+        </div>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>
