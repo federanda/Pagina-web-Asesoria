@@ -696,3 +696,73 @@ body {
         padding: 2.5rem 1.5rem;
     }
 }
+/* ════════════════════════════════════════════════════════════════
+   AGREGAR al final de tu style.css  —  Menú hamburguesa mobile
+   ════════════════════════════════════════════════════════════════ */
+
+/* El botón hamburguesa: oculto en desktop, visible en mobile */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--accent);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animación X al abrir */
+.nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile ─────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    /* Menú oculto por defecto en mobile */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;          /* fuera de pantalla a la derecha */
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--bg, #0d0d0d);
+    padding: 80px 32px 40px;
+    gap: 8px;
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    box-shadow: -4px 0 24px rgba(0,0,0,0.4);
+    list-style: none;
+    margin: 0;
+  }
+
+  /* Menú abierto */
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+}
