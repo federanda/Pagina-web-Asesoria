@@ -1128,3 +1128,58 @@ body {
     margin-bottom: 60px;
   }
 }
+/* ================================================================
+   NAV COMPACTO EN MOBILE — agregar al final de style.css
+   Reduce la altura del nav para que en "Acerca de mí" (y todas
+   las páginas) la foto/contenido quede visible sin tener que
+   hacer scroll.
+   ================================================================ */
+
+/* ── Desktop: nav un poco más ajustado también ── */
+.nav {
+  position: fixed;          /* fijo arriba en todo momento */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;       /* era más alto; lo bajamos */
+}
+
+/* El logo SVG lo achicamos levemente */
+.nav-logo .logo-svg,
+.nav-logo svg {
+  width: 36px;
+  height: 36px;
+}
+
+/* ── Mobile: nav aún más compacto ── */
+@media (max-width: 768px) {
+
+  .nav-inner {
+    padding: 10px 20px;     /* padding vertical mínimo */
+  }
+
+  .nav-logo .logo-svg,
+  .nav-logo svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* El page-header de cada sección interior tiene que empujar
+     hacia abajo para no quedar debajo del nav fijo.
+     Ajustá el valor si tu nav tiene una altura diferente. */
+  .page-header {
+    padding-top: 80px;
+  }
+
+  /* En la sección "Acerca de mí", el grid bio arranca más arriba */
+  .about-bio {
+    padding-top: 40px;
+  }
+}
