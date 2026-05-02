@@ -766,3 +766,365 @@ body {
     border-bottom: 1px solid rgba(255,255,255,0.07);
   }
 }
+/* ================================================================
+   PYMES PAGE — agregar al final de style.css
+   Todas las clases usan el prefijo "pymes-" para no pisar
+   ningún estilo existente. Depende de las variables --accent,
+   --bg, --surface, --border, --text, --muted, --accent que ya
+   están definidas en tu CSS.
+   ================================================================ */
+
+/* ── Header ─────────────────────────────────────────────────────── */
+.pymes-header {
+  padding: 120px 0 80px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.pymes-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 50% 0%, rgba(200,169,110,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Tabs nav ────────────────────────────────────────────────────── */
+.pymes-tabs-section {
+  padding: 80px 0 0;
+}
+
+.pymes-tabs-nav {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 64px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.pymes-tabs-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.pymes-tab-btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  transition: color 0.25s;
+}
+
+.pymes-tab-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.pymes-tab-btn:hover {
+  color: var(--text);
+}
+
+.pymes-tab-btn.active {
+  color: var(--accent);
+}
+
+.pymes-tab-btn.active::after {
+  transform: scaleX(1);
+}
+
+/* ── Tab panels ──────────────────────────────────────────────────── */
+.pymes-tab-panel {
+  display: none;
+}
+
+.pymes-tab-panel.active {
+  display: block;
+}
+
+/* ── Instrument cards grid ───────────────────────────────────────── */
+.pymes-instruments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 80px;
+}
+
+.pymes-inst-card {
+  background: var(--surface);
+  padding: 40px 32px;
+  cursor: pointer;
+  transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.pymes-inst-card:hover {
+  background: var(--surface2, #1a1a1a);
+}
+
+.pymes-inst-card.expanded {
+  background: var(--surface2, #1a1a1a);
+}
+
+/* Línea dorada en el tope de la card destacada */
+.pymes-inst-card--featured::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.pymes-inst-tag {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.pymes-inst-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.pymes-inst-summary {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* ── Acordeón (detalle expandible) ───────────────────────────────── */
+.pymes-inst-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.pymes-inst-card.expanded .pymes-inst-details {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.pymes-inst-details ul {
+  list-style: none;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pymes-inst-details li {
+  font-size: 0.82rem;
+  color: var(--muted);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.55;
+}
+
+.pymes-inst-details li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  opacity: 0.6;
+}
+
+/* Indicador "Ver detalle" con flechita */
+.pymes-expand-hint {
+  margin-top: 20px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pymes-expand-hint svg {
+  transition: transform 0.3s ease;
+}
+
+.pymes-inst-card.expanded .pymes-expand-hint svg {
+  transform: rotate(180deg);
+}
+
+/* ── Tabla comparativa ───────────────────────────────────────────── */
+.pymes-compare-section {
+  padding-bottom: 80px;
+}
+
+.pymes-compare-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.pymes-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pymes-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  min-width: 600px;
+}
+
+.pymes-compare-table th {
+  text-align: left;
+  padding: 14px 20px;
+  background: var(--surface2, #1a1a1a);
+  color: var(--accent);
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+}
+
+.pymes-compare-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.pymes-compare-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.pymes-compare-table tbody tr:hover td {
+  background: var(--surface, #141414);
+}
+
+.pymes-compare-table td:first-child {
+  color: var(--text);
+  font-weight: 400;
+}
+
+/* Badges de canal */
+.pymes-tag {
+  display: inline-block;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.pymes-tag--cap {
+  background: rgba(200,169,110,0.12);
+  color: var(--accent);
+}
+
+.pymes-tag--bank {
+  background: rgba(120,160,200,0.1);
+  color: #78a0c8;
+}
+
+/* ── CTA final ───────────────────────────────────────────────────── */
+.pymes-cta {
+  margin-bottom: 80px;
+  padding: 64px 48px;
+  border: 1px solid var(--border);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pymes-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 80% at 50% 100%, rgba(200,169,110,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.pymes-cta-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.pymes-cta-text {
+  color: var(--muted);
+  font-size: 0.9rem;
+  max-width: 480px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .pymes-header {
+    padding: 100px 0 60px;
+  }
+
+  .pymes-tab-btn {
+    padding: 14px 20px;
+    font-size: 0.7rem;
+  }
+
+  .pymes-instruments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pymes-inst-card {
+    padding: 28px 24px;
+  }
+
+  .pymes-compare-table th,
+  .pymes-compare-table td {
+    padding: 12px 14px;
+    font-size: 0.78rem;
+  }
+
+  .pymes-cta {
+    padding: 48px 24px;
+    margin-bottom: 60px;
+  }
+}
