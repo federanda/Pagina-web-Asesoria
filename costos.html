@@ -4,51 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Costos | Federico Randazzo - Asesor Financiero</title>
-    <!-- Tus fuentes de Google -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css"> <!-- Asegúrate que la ruta a tu CSS sea correcta -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Navegación -->
-    <!-- ════════════════════════════════════════════════════════════════
-     NAV UNIFICADO — pegar en TODAS las páginas (index, about,
-     personas, pymes, costos, contacto).
-     Cambiá la clase "active" al link que corresponda a cada página.
-     ════════════════════════════════════════════════════════════════ -->
-
-<nav class="nav">
-  <div class="nav-inner">
-
-    <a href="index.html" class="nav-logo">
-      <svg class="logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
-        <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
-        <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
-      </svg>
-    </a>
-
-    <!-- Todas las páginas en todos los navs -->
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="about.html">Acerca de mí</a></li>
-      <li><a href="personas.html">Asesoría Personal</a></li>
-      <li><a href="pymes.html">PyMES</a></li>
-      <li><a href="costos.html">Costos</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-
-    <!-- Botón hamburguesa (debe estar DESPUÉS de nav-links en el HTML) -->
-    <button class="nav-toggle" aria-label="Menú">
-      <span></span><span></span><span></span>
-    </button>
-
-  </div>
-</nav>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+                    <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+                    <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+                </svg>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Acerca de mí</a></li>
+                <li><a href="personas.html">Asesoría Personal</a></li>
+                <li><a href="pymes.html">PyMES</a></li>
+                <li><a href="costos.html" class="active">Costos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
 
     <header class="page-header">
         <div class="container">
-            <p class="hero-eyebrow">Transparencia</p>
+            <p class="section-label">Transparencia</p>
             <h1 class="page-title">Estructura de Costos</h1>
             <p class="page-subtitle">Información clara sobre aranceles y comisiones para operar en el mercado.</p>
         </div>
@@ -57,9 +43,8 @@
     <section class="pricing">
         <div class="container">
             <div class="pricing-grid">
-                <!-- Tarjeta 1: Honorarios -->
                 <div class="pricing-card">
-                    <p class="hero-eyebrow">Asesoramiento</p>
+                    <p class="section-label">Asesoramiento</p>
                     <h3>Gestión Particular</h3>
                     <p>Apertura de cuenta y asesoramiento estratégico continuo sobre tu cartera.</p>
                     <span class="price-tag">Sin Cargo</span>
@@ -70,9 +55,8 @@
                     </ul>
                 </div>
 
-                <!-- Tarjeta 2: Mercado -->
                 <div class="pricing-card">
-                    <p class="hero-eyebrow">Mercado Local</p>
+                    <p class="section-label">Mercado Local</p>
                     <h3>Derechos ALyC</h3>
                     <p>Comisiones transaccionales aplicadas por Balanz Capital al momento de operar.</p>
                     <span class="price-tag">Tarifario Oficial</span>
@@ -87,17 +71,28 @@
             <div class="pricing-footer-note">
                 * Los aranceles detallados corresponden al esquema estándar de Balanz Capital. En operaciones de volumen o estrategias específicas de renta fija, los mismos pueden ser sujetos a revisión. No existen cargos fijos por asesoramiento particular.
             </div>
-            
+
             <div style="text-align: center; margin-top: 4rem;">
-                <a href="index.html#test-perfil" class="btn btn-primary">Realizar Test de Perfil</a>
+                <a href="personas.html#test-perfil" class="btn btn-primary">Realizar Test de Perfil</a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <div class="footer-logo">Federico <span>Randazzo</span></div>
-        <p class="footer-disclaimer">Agente Productor Certificado CNV.</p>
+        <div class="container footer-inner">
+            <div class="footer-logo">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                    <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+                    <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+                    <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+                </svg>
+                <span>FR Asesoría Financiera</span>
+            </div>
+            <p class="footer-legal">Idóneo en Mercado de Capitales — Comisión Nacional de Valores · Argentina</p>
+            <p class="footer-disclaimer">La información contenida en este sitio tiene carácter informativo y no constituye una oferta ni solicitud de compra o venta de valores. Las inversiones conllevan riesgos.</p>
+        </div>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>
