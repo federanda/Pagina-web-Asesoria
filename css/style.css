@@ -1157,7 +1157,7 @@ body {
 @media (max-width: 768px) {
 
   .nav-inner {
-    padding: 10px 20px;     /* padding vertical mínimo */
+    padding: 5px 20px;     /* padding vertical mínimo */
   }
 
   .nav-logo .logo-svg,
