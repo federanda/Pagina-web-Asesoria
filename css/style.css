@@ -154,98 +154,168 @@ img { max-width: 100%; display: block; }
 .footer-disclaimer { font-size: 0.7rem; color: var(--border); opacity: 0.7; margin-top: 1.5rem; max-width: 600px; margin-inline: auto; }
 
 /* ════════════════════════════════════════════════════════════════
-   7. RESPONSIVE (OPTIMIZACIÓN EXTREMA PARA MÓVIL)
+   7. REDISEÑO ELEGANTE MÓVIL (Max 768px)
    ════════════════════════════════════════════════════════════════ */
 
 @media (max-width: 768px) {
-  /* 1. Nav Ultra Compacto */
-  .nav-inner { 
-    padding: 5px 15px; 
-  }
-  .nav-logo svg { 
-    width: 28px; height: 28px; 
+  
+  /* --- Navegación: Minimalista --- */
+  .nav-inner {
+    padding: 12px 20px;
+    background: rgba(244, 244, 242, 0.95); /* Efecto traslúcido */
+    backdrop-filter: blur(10px);
   }
 
-  /* 2. Hero: Reducción de aire y fuentes */
-  .hero { 
-    padding: 5rem 1rem 2rem; /* Menos espacio arriba y a los lados */
-  }
-  .hero-grid { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 0.8rem; /* Espacio mínimo entre bloques */
+  .nav-toggle {
+    display: flex;
+    gap: 6px;
   }
   
-  .hero-eyebrow { 
-    font-size: 0.6rem; 
-    letter-spacing: 2px; 
-    margin-bottom: 0.2rem; 
-  }
-  .hero-name { 
-    font-size: 2.2rem; /* Título más chico para que no ocupe media pantalla */
-    line-height: 1;
-  }
-  .hero-credential { 
-    font-size: 0.9rem; 
-    margin: 0.5rem 0; 
-  }
-  .hero-divider { 
-    margin: 0.8rem auto; 
-    width: 30px; 
+  .nav-toggle span {
+    width: 22px;
+    height: 1.5px;
+    background: var(--accent);
+    border-radius: 2px;
   }
 
-  /* 3. Foto: Subir y achicar */
-  .hero-image-container { 
-    order: 2; 
-    width: 60%; /* Foto más pequeña para que suban los botones */
-    margin-top: -10px; 
-  }
-  .hero-image-frame { 
-    padding: 0.5rem; /* Menos marco blanco */
-    box-shadow: 8px 8px 0px var(--surface); /* Sombra más discreta */
-  }
-
-  /* 4. Botones: Menos altura */
-  .hero-cta { 
-    order: 3; 
-    display: flex; 
-    flex-direction: column; 
-    width: 100%; 
-    gap: 8px; 
-  }
-  .btn { 
-    padding: 0.8rem 1.5rem; /* Botones más finos */
-    font-size: 0.7rem; 
-  }
-  .btn-ghost { 
-    margin-left: 0; 
+  /* Menú lateral refinado */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: white;
+    padding: 100px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-shadow: -15px 0 30px rgba(0,0,0,0.03);
+    transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
-  /* 5. Secciones de contenido (About, Personas) */
-  .page-header { 
-    padding: 5rem 1rem 2rem; 
-  }
-  .page-title { 
-    font-size: 2rem; 
-  }
-  .about-grid { 
-    padding: 1.5rem 1rem; 
-    gap: 1.5rem; 
-  }
-  .about-photo { 
-    height: 250px; /* Foto de bio más corta */
+  .nav-links a {
+    font-size: 1rem;
+    color: var(--accent);
+    border-bottom: 1px solid var(--surface);
+    padding-bottom: 10px;
+    letter-spacing: 2px;
   }
 
-  /* 6. Cards y Test de Perfil */
-  .grid-carteras { 
-    padding: 0 1rem; 
-    gap: 1rem; 
+  /* --- Hero: Diseño "Editorial" --- */
+  .hero {
+    padding: 7rem 1.5rem 3rem;
+    text-align: center;
   }
-  .card, #quiz-box { 
-    padding: 1.5rem 1rem; 
-    box-shadow: 8px 8px 0px var(--surface); 
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
-  .card h3 { 
-    font-size: 1.6rem; 
+
+  .hero-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: var(--secondary);
+    margin-bottom: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .hero-name {
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-credential {
+    font-size: 0.95rem;
+    color: var(--muted);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-divider {
+    margin: 1.2rem auto;
+    width: 30px;
+    opacity: 0.5;
+  }
+
+  /* --- La Foto: Estilo Galería --- */
+  .hero-image-container {
+    order: 2;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .hero-image-frame {
+    padding: 0; /* Eliminamos el marco grueso */
+    border: none;
+    background: none;
+    box-shadow: none;
+    position: relative;
+  }
+
+  .hero-img {
+    border-radius: 4px; /* Un toque sutil de redondeado */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* Sombra elegante, no sólida */
+    filter: none; /* Quitamos el filtro gris */
+  }
+
+  /* Decoración sutil detrás de la foto */
+  .hero-image-frame::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--secondary);
+    z-index: -1;
+    border-radius: 4px;
+    opacity: 0.3;
+  }
+
+  /* --- Botones: Estilizados --- */
+  .hero-cta {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .btn {
+    padding: 1.1rem;
+    border-radius: 2px;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    box-shadow: 0 4px 15px rgba(62, 74, 61, 0.2);
+  }
+
+  .btn-ghost {
+    margin-left: 0;
+    border: 1px solid var(--border);
+    color: var(--accent);
+  }
+
+  /* --- Cards de Servicios: Más aire --- */
+  .services-preview {
+    padding: 4rem 1.5rem;
+  }
+
+  .service-card {
+    padding: 2.5rem 1.5rem;
+    border: none;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    margin-bottom: 1rem;
+    border-radius: 4px;
   }
 }
