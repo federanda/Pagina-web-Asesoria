@@ -1188,12 +1188,13 @@ body {
 
   .hero-text {
     order: 1; /* Primero: Nombre y credencial */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .hero-image-container {
     order: 2; /* Segundo: La foto */
-    margin-bottom: 30px;
+    margin-top: -20px;
+    margin-bottom: 20px;
     width: 80%; /* Ajusta el tamaño de la foto en el cel si es necesario */
   }
 
