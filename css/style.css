@@ -178,20 +178,15 @@ body {
 /* AJUSTES PARA EL MENÚ MÓVIL (JS) */
 @media (max-width: 768px) {
     .nav-toggle {
-        display: block;
-        cursor: pointer;
-        background: none;
-        border: none;
-        z-index: 1000;
-    }
-    .nav-toggle span {
-        display: block;
-        width: 25px;
-        height: 2px;
-        background: var(--accent);
-        margin: 5px;
-        transition: 0.3s;
-    }
+    width: 30px;      /* Antes quizás era de 40px o más */
+    height: 22px;     /* Reducimos la altura total */
+    padding: 0;       /* Quitamos espacios internos */
+}
+
+.nav-toggle span {
+    height: 1.5px;    /* Líneas más finas para un look más elegante */
+    width: 100%;      /* Que ocupen el ancho del botón */
+}
     .nav-links {
         position: fixed;
         right: -100%;
