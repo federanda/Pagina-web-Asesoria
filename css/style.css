@@ -1404,3 +1404,168 @@ p { color: var(--text); }
     height: 50px;
   }
 }
+/* ─── ACTIVOS POR PERFIL ─────────────────────────────────────── */
+.activos-section {
+  padding: 6rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.activos-title {
+  font-family: var(--cormorant);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.activos-subtitle {
+  font-size: 0.88rem;
+  color: var(--muted);
+  max-width: 600px;
+  line-height: 1.75;
+  margin-bottom: 3rem;
+}
+
+.activos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.activos-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+  overflow: hidden;
+}
+
+.activos-card--featured {
+  border-color: var(--secondary);
+  background: var(--surface);
+}
+
+.activos-card-header {
+  padding: 1.25rem 1.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.activos-perfil-tag {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(62, 74, 61, 0.08);
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  align-self: flex-start;
+}
+
+.activos-perfil-tag--mod {
+  color: var(--secondary);
+  background: rgba(140, 120, 81, 0.1);
+}
+
+.activos-perfil-tag--agr {
+  color: #7a3e2e;
+  background: rgba(122, 62, 46, 0.08);
+}
+
+.activos-objetivo {
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.activos-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.activo-item {
+  padding: 1.1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: background var(--transition);
+}
+
+.activo-item:last-child { border-bottom: none; }
+.activo-item:hover { background: var(--surface); }
+
+.activo-info {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.activo-ticker {
+  font-family: var(--cormorant);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.activo-nombre {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.activo-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.activo-tir {
+  font-family: var(--cormorant);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.activo-moneda {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--secondary);
+  padding: 0.2rem 0.55rem;
+  border-radius: 20px;
+}
+
+.activo-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.activos-disclaimer {
+  margin-top: 2rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.7;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+  border-left: 3px solid var(--secondary);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .activos-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .activos-section { padding: 4rem 0; }
+  .activo-item { padding: 1rem 1.25rem; }
+}
