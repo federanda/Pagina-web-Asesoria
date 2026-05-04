@@ -1183,3 +1183,34 @@ body {
     padding-top: 40px;
   }
 }
+@media (max-width: 768px) {
+  .hero-grid {
+    display: flex;
+    flex-direction: column; /* Apila los elementos uno arriba del otro */
+    text-align: center;     /* Centra el texto en móviles */
+    align-items: center;
+  }
+
+  .hero-text {
+    order: 1; /* Primero: Nombre y credencial */
+    margin-bottom: 20px;
+  }
+
+  .hero-image-container {
+    order: 2; /* Segundo: La foto */
+    margin-bottom: 30px;
+    width: 80%; /* Ajusta el tamaño de la foto en el cel si es necesario */
+  }
+
+  .hero-cta {
+    order: 3; /* Tercero: Los botones */
+    display: flex;
+    flex-direction: column; /* Botones uno sobre otro en móviles */
+    gap: 15px;
+    width: 100%;
+  }
+
+  .hero-divider {
+    margin: 15px auto; /* Centra el divisor */
+  }
+}
