@@ -154,53 +154,98 @@ img { max-width: 100%; display: block; }
 .footer-disclaimer { font-size: 0.7rem; color: var(--border); opacity: 0.7; margin-top: 1.5rem; max-width: 600px; margin-inline: auto; }
 
 /* ════════════════════════════════════════════════════════════════
-   7. RESPONSIVE (TABLETS Y CELULARES)
+   7. RESPONSIVE (OPTIMIZACIÓN EXTREMA PARA MÓVIL)
    ════════════════════════════════════════════════════════════════ */
 
-/* --- TABLETS & LAPTOPS CHICAS (Max 1024px) --- */
-@media (max-width: 1024px) {
-  .hero-grid, .about-grid { gap: 2rem; }
-  .hero-name { font-size: 3.5rem; }
-}
-
-/* --- MÓVILES Y TABLETS VERTICALES (Max 768px) --- */
 @media (max-width: 768px) {
-  /* Nav compacto */
-  .nav-inner { padding: 8px 20px; }
-  .nav-logo svg { width: 30px; height: 30px; }
-  .nav-toggle { display: flex; }
-
-  .nav-links {
-    position: fixed; top: 0; right: -100%; 
-    height: 100vh; width: 75%; max-width: 280px;
-    background: var(--bg); flex-direction: column; 
-    padding: 80px 30px; gap: 10px;
-    box-shadow: -10px 0 20px rgba(0,0,0,0.05);
-    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* 1. Nav Ultra Compacto */
+  .nav-inner { 
+    padding: 5px 15px; 
   }
-  .nav-links.open { right: 0; }
+  .nav-logo svg { 
+    width: 28px; height: 28px; 
+  }
 
-  /* Hero Compacto y Reordenado */
-  .hero { padding-top: 6rem; }
-  .hero-grid { display: flex; flex-direction: column; text-align: center; align-items: center; gap: 1.5rem; }
+  /* 2. Hero: Reducción de aire y fuentes */
+  .hero { 
+    padding: 5rem 1rem 2rem; /* Menos espacio arriba y a los lados */
+  }
+  .hero-grid { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.8rem; /* Espacio mínimo entre bloques */
+  }
   
-  .hero-text { order: 1; }
-  .hero-image-container { order: 2; width: 70%; margin-top: -10px; }
-  .hero-cta { order: 3; display: flex; flex-direction: column; width: 100%; gap: 10px; }
-  .btn-ghost { margin-left: 0; }
+  .hero-eyebrow { 
+    font-size: 0.6rem; 
+    letter-spacing: 2px; 
+    margin-bottom: 0.2rem; 
+  }
+  .hero-name { 
+    font-size: 2.2rem; /* Título más chico para que no ocupe media pantalla */
+    line-height: 1;
+  }
+  .hero-credential { 
+    font-size: 0.9rem; 
+    margin: 0.5rem 0; 
+  }
+  .hero-divider { 
+    margin: 0.8rem auto; 
+    width: 30px; 
+  }
 
-  .hero-name { font-size: 2.8rem; }
-  .hero-divider { margin: 1rem auto; }
+  /* 3. Foto: Subir y achicar */
+  .hero-image-container { 
+    order: 2; 
+    width: 60%; /* Foto más pequeña para que suban los botones */
+    margin-top: -10px; 
+  }
+  .hero-image-frame { 
+    padding: 0.5rem; /* Menos marco blanco */
+    box-shadow: 8px 8px 0px var(--surface); /* Sombra más discreta */
+  }
 
-  /* Ajustes About & Secciones */
-  .about-grid { grid-template-columns: 1fr; text-align: center; padding: 2rem 1.5rem; }
-  .about-photo { height: 300px; }
-  
-  .page-header { padding-top: 6rem; }
+  /* 4. Botones: Menos altura */
+  .hero-cta { 
+    order: 3; 
+    display: flex; 
+    flex-direction: column; 
+    width: 100%; 
+    gap: 8px; 
+  }
+  .btn { 
+    padding: 0.8rem 1.5rem; /* Botones más finos */
+    font-size: 0.7rem; 
+  }
+  .btn-ghost { 
+    margin-left: 0; 
+  }
 
-  /* Cards más compactas */
-  .card, .pricing-card, .contact-method-card, .contact-form-container {
-    padding: 2rem 1.2rem;
-    box-shadow: 10px 10px 0px var(--surface);
+  /* 5. Secciones de contenido (About, Personas) */
+  .page-header { 
+    padding: 5rem 1rem 2rem; 
+  }
+  .page-title { 
+    font-size: 2rem; 
+  }
+  .about-grid { 
+    padding: 1.5rem 1rem; 
+    gap: 1.5rem; 
+  }
+  .about-photo { 
+    height: 250px; /* Foto de bio más corta */
+  }
+
+  /* 6. Cards y Test de Perfil */
+  .grid-carteras { 
+    padding: 0 1rem; 
+    gap: 1rem; 
+  }
+  .card, #quiz-box { 
+    padding: 1.5rem 1rem; 
+    box-shadow: 8px 8px 0px var(--surface); 
+  }
+  .card h3 { 
+    font-size: 1.6rem; 
   }
 }
