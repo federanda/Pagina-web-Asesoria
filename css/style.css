@@ -1,5 +1,5 @@
 /* ════════════════════════════════════════════════════════════════
-   1. VARIABLES Y BASE
+   1. VARIABLES Y BASE (Estilo Editorial)
    ════════════════════════════════════════════════════════════════ */
 :root {
   --bg: #f4f4f2;
@@ -21,301 +21,155 @@ body {
   color: var(--text); 
   background-color: var(--bg);
   line-height: 1.6;
-  overflow-x: hidden;
-}
-
-img { max-width: 100%; display: block; }
-
-/* ════════════════════════════════════════════════════════════════
-   2. NAVEGACIÓN (HEADER)
-   ════════════════════════════════════════════════════════════════ */
-.nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-  z-index: 1000;
-  transition: all 0.3s ease;
-}
-
-.nav-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 40px; /* Compacto por defecto */
-}
-
-.nav-logo svg { width: 36px; height: 36px; }
-
-.nav-links { display: flex; list-style: none; gap: 1.5rem; }
-.nav-links a { 
-  text-decoration: none; 
-  color: var(--text); 
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  transition: color 0.3s;
-}
-.nav-links a:hover { color: var(--secondary); }
-
-/* Menú Hamburguesa */
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none; border: none; cursor: pointer;
-  z-index: 1001;
-}
-.nav-toggle span {
-  width: 24px; height: 1.5px;
-  background: var(--accent);
-  transition: 0.3s;
 }
 
 /* ════════════════════════════════════════════════════════════════
-   3. HERO SECTION (HOME)
+   2. INDEX.HTML (Presentación y Hero)
    ════════════════════════════════════════════════════════════════ */
-.hero {
-  padding: 8rem 2rem 4rem; /* Espacio para el nav fijo */
-  max-width: 1100px;
-  margin: 0 auto;
+.hero-index {
+    padding: 8rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 3rem;
-  align-items: center;
+/* Reparación de la imagen inmensa */
+.hero-img {
+    width: 100%;
+    max-width: 450px; /* Controla el tamaño para que no sature */
+    height: auto;
+    border: 1px solid var(--border);
+    box-shadow: 20px 20px 0px var(--surface);
 }
 
 .hero-name { 
-  font-family: var(--cormorant); 
-  font-size: clamp(3rem, 5vw, 4.8rem); 
-  line-height: 0.9;
-  color: var(--accent);
-}
-.hero-name span { color: var(--secondary); }
-
-.hero-eyebrow { 
-  text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; 
-  color: var(--secondary); margin-bottom: 0.5rem;
-}
-
-.hero-credential { margin: 1rem 0; font-size: 1rem; }
-
-.hero-divider { width: 40px; height: 1px; background: var(--secondary); margin: 1.5rem 0; }
-
-.hero-image-frame {
-  padding: 1rem; background: white; border: 1px solid var(--border);
-  box-shadow: 15px 15px 0px var(--surface);
-}
-
-/* ════════════════════════════════════════════════════════════════
-   4. COMPONENTES GLOBALES (Botones, Cards, Headers)
-   ════════════════════════════════════════════════════════════════ */
-.btn {
-  padding: 1rem 2rem;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  transition: 0.4s;
-}
-.btn-primary { background: var(--accent); color: white; border: 1px solid var(--accent); }
-.btn-ghost { border: 1px solid var(--accent); color: var(--accent); margin-left: 0.5rem; }
-.btn:hover { background: var(--secondary); border-color: var(--secondary); color: white; }
-
-.page-header { padding: 8rem 2rem 3rem; text-align: center; background: var(--surface); }
-.page-title { font-family: var(--cormorant); font-size: clamp(2.5rem, 4vw, 3.5rem); color: var(--accent); }
-
-/* ════════════════════════════════════════════════════════════════
-   5. SECCIONES ESPECÍFICAS (About, Personas, PyMEs)
-   ════════════════════════════════════════════════════════════════ */
-/* About */
-.about-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 3rem; padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
-.about-photo { width: 100%; height: 350px; object-fit: cover; border: 1px solid var(--border); }
-
-/* Personas / Cards */
-.grid-carteras { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 2rem auto; }
-.card { background: var(--surface-alt); padding: 2.5rem 1.5rem; border: 1px solid var(--border); box-shadow: 10px 10px 0px var(--surface); }
-
-/* PyMEs Tabs & Tables */
-.pymes-tabs-nav { display: flex; border-bottom: 1px solid var(--border); margin-bottom: 2rem; overflow-x: auto; }
-.pymes-tab-btn { padding: 12px 20px; font-size: 0.7rem; cursor: pointer; background: none; border: none; color: var(--muted); letter-spacing: 1px; }
-.pymes-tab-btn.active { color: var(--accent); border-bottom: 2px solid var(--accent); }
-
-/* ════════════════════════════════════════════════════════════════
-   6. FOOTER
-   ════════════════════════════════════════════════════════════════ */
-.footer { padding: 4rem 2rem; background: var(--accent); color: var(--surface); text-align: center; }
-.footer-disclaimer { font-size: 0.7rem; color: var(--border); opacity: 0.7; margin-top: 1.5rem; max-width: 600px; margin-inline: auto; }
-
-/* ════════════════════════════════════════════════════════════════
-   7. REDISEÑO ELEGANTE MÓVIL (Max 768px)
-   ════════════════════════════════════════════════════════════════ */
-
-@media (max-width: 768px) {
-  
-  /* --- Navegación: Minimalista --- */
-  .nav-inner {
-    padding: 12px 20px;
-    background: rgba(244, 244, 242, 0.95); /* Efecto traslúcido */
-    backdrop-filter: blur(10px);
-  }
-
-  .nav-toggle {
-    display: flex;
-    gap: 6px;
-  }
-  
-  .nav-toggle span {
-    width: 22px;
-    height: 1.5px;
-    background: var(--accent);
-    border-radius: 2px;
-  }
-
-  /* Menú lateral refinado */
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    height: 100vh;
-    background: white;
-    padding: 100px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    box-shadow: -15px 0 30px rgba(0,0,0,0.03);
-    transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  }
-
-  .nav-links a {
-    font-size: 1rem;
+    font-family: var(--cormorant); 
+    font-size: clamp(3rem, 5vw, 4.5rem); 
     color: var(--accent);
-    border-bottom: 1px solid var(--surface);
-    padding-bottom: 10px;
-    letter-spacing: 2px;
-  }
+    line-height: 1;
+}
 
-  /* --- Hero: Diseño "Editorial" --- */
-  .hero {
-    padding: 7rem 1.5rem 3rem;
-    text-align: center;
-  }
+/* ════════════════════════════════════════════════════════════════
+   3. ABOUT.HTML (Jerarquía y Resaltadores)
+   ════════════════════════════════════════════════════════════════ */
+.about-content {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
 
-  .hero-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .hero-eyebrow {
-    font-size: 0.65rem;
-    letter-spacing: 3px;
+/* Resaltador para que no sea solo texto plano */
+.highlight {
     color: var(--secondary);
-    margin-bottom: 0.8rem;
-    opacity: 0.8;
-  }
+    font-weight: 600;
+    border-bottom: 2px solid var(--surface);
+}
 
-  .hero-name {
-    font-size: 2.8rem;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
-  }
-
-  .hero-credential {
-    font-size: 0.95rem;
-    color: var(--muted);
-    font-weight: 300;
-    letter-spacing: 0.5px;
-  }
-
-  .hero-divider {
-    margin: 1.2rem auto;
-    width: 30px;
-    opacity: 0.5;
-  }
-
-  /* --- La Foto: Estilo Galería --- */
-  .hero-image-container {
-    order: 2;
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .hero-image-frame {
-    padding: 0; /* Eliminamos el marco grueso */
-    border: none;
-    background: none;
-    box-shadow: none;
-    position: relative;
-  }
-
-  .hero-img {
-    border-radius: 4px; /* Un toque sutil de redondeado */
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* Sombra elegante, no sólida */
-    filter: none; /* Quitamos el filtro gris */
-  }
-
-  /* Decoración sutil detrás de la foto */
-  .hero-image-frame::after {
-    content: '';
-    position: absolute;
-    top: 15px;
-    right: -15px;
-    width: 100%;
-    height: 100%;
-    border: 1px solid var(--secondary);
-    z-index: -1;
-    border-radius: 4px;
-    opacity: 0.3;
-  }
-
-  /* --- Botones: Estilizados --- */
-  .hero-cta {
-    order: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  .btn {
-    padding: 1.1rem;
-    border-radius: 2px;
-    font-weight: 400;
-    letter-spacing: 2px;
-  }
-
-  .btn-primary {
-    background: var(--accent);
-    box-shadow: 0 4px 15px rgba(62, 74, 61, 0.2);
-  }
-
-  .btn-ghost {
-    margin-left: 0;
-    border: 1px solid var(--border);
+.about-intro {
+    font-family: var(--cormorant);
+    font-size: 2rem;
+    margin-bottom: 2rem;
     color: var(--accent);
-  }
+}
 
-  /* --- Cards de Servicios: Más aire --- */
-  .services-preview {
-    padding: 4rem 1.5rem;
-  }
+/* Separador elegante entre bloques de vida/carrera */
+.divider {
+    width: 50px;
+    height: 1px;
+    background: var(--secondary);
+    margin: 3rem 0;
+}
 
-  .service-card {
-    padding: 2.5rem 1.5rem;
-    border: none;
-    background: white;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+/* ════════════════════════════════════════════════════════════════
+   4. PYMES.HTML Y PERSONAS.HTML (Cards con Aire)
+   ════════════════════════════════════════════════════════════════ */
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-servicio {
+    background: var(--surface-alt);
+    padding: 3rem 2rem;
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease;
+}
+
+.card-servicio:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+}
+
+.card-servicio h3 {
+    font-family: var(--cormorant);
+    color: var(--accent);
+    font-size: 1.8rem;
     margin-bottom: 1rem;
-    border-radius: 4px;
-  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   5. COSTOS.HTML (Tablas Boutique)
+   ════════════════════════════════════════════════════════════════ */
+.table-wrapper {
+    max-width: 900px;
+    margin: 4rem auto;
+    overflow-x: auto;
+}
+
+.table-costos {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.table-costos th {
+    background: var(--accent);
+    color: white;
+    padding: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+.table-costos td {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   6. CONTACTO.HTML (Formulario Refinado)
+   ════════════════════════════════════════════════════════════════ */
+.contact-box {
+    max-width: 600px;
+    margin: 4rem auto;
+    background: var(--surface);
+    padding: 3rem;
+}
+
+.input-field {
+    width: 100%;
+    padding: 1rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    margin-bottom: 1.5rem;
+    font-family: var(--jost);
+}
+
+.btn-enviar {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    width: 100%;
 }
