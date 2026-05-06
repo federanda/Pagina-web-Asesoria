@@ -1278,7 +1278,9 @@ p { color: var(--text); }
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  .about-photo-frame { aspect-ratio: 3/2; max-height: 320px; }
+  .about-photo-frame { aspect-ratio: 3/2; max-height: 320px;
+  object-position: center top;
+ }
 
   .values-grid { grid-template-columns: 1fr; gap: 2rem; }
 
