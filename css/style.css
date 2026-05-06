@@ -1256,10 +1256,12 @@ p { color: var(--text); }
   }
 
   .hero-image-frame {
-    aspect-ratio: 4/3;
-    max-height: 340px;
-  }
-
+  aspect-ratio: 4/3;
+  max-height: 340px;
+}
+.hero-image-frame .hero-img {
+  object-position: center top;
+}
   .hero-name { font-size: clamp(3rem, 10vw, 5rem); }
 
   .services-grid {
