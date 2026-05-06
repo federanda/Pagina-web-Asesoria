@@ -302,6 +302,16 @@ p { color: var(--text); }
 .hero-image-frame:hover .hero-img {
   filter: grayscale(0%);
 }
+.hero-tagline {
+  font-family: var(--cormorant);
+  font-size: 1.35rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--muted);
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
 
 
 /* ─── SERVICES PREVIEW ──────────────────────────────────────── */
