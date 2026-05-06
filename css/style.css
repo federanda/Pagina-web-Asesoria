@@ -1256,8 +1256,8 @@ p { color: var(--text); }
   }
 
   .hero-image-frame {
-  aspect-ratio: 4/3;
-  max-height: 340px;
+  aspect-ratio: 4/5;
+  max-height: 480px;
 }
 .hero-image-frame .hero-img {
   object-position: center top;
@@ -1278,7 +1278,7 @@ p { color: var(--text); }
     grid-template-columns: 1fr;
     gap: 3rem;
   }
- .about-photo-frame { aspect-ratio: 3/2; max-height: 320px; }
+ .about-photo-frame { aspect-ratio: 4/5; max-height: 480px; }
  .about-photo { object-position: center top; }
 
   .values-grid { grid-template-columns: 1fr; gap: 2rem; }
