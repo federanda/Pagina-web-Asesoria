@@ -1544,6 +1544,196 @@ p { color: var(--text); }
 }
 
 
+/* ─── DOLLAR EROSION SECTION (index) ────────────────────────── */
+.dollar-erosion {
+  padding: 7rem 0;
+  background: var(--accent);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle texture overlay */
+.dollar-erosion::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 39px,
+      rgba(255,255,255,0.03) 39px,
+      rgba(255,255,255,0.03) 40px
+    );
+  pointer-events: none;
+}
+
+/* Large ghosted background number */
+.dollar-erosion::after {
+  content: '$';
+  position: absolute;
+  right: -0.1em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--cormorant);
+  font-size: clamp(18rem, 30vw, 28rem);
+  font-weight: 600;
+  color: rgba(255,255,255,0.04);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.dollar-erosion-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.dollar-erosion-text .section-label {
+  color: var(--secondary);
+  opacity: 0.85;
+}
+
+.dollar-erosion-title {
+  font-family: var(--cormorant);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 400;
+  color: #f4f4f2;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.dollar-erosion-body {
+  font-size: 0.95rem;
+  color: rgba(244, 244, 242, 0.65);
+  line-height: 1.85;
+  margin-bottom: 2.5rem;
+  max-width: 420px;
+}
+
+.dollar-erosion-body strong {
+  color: rgba(244, 244, 242, 0.9);
+  font-weight: 500;
+}
+
+.dollar-erosion-text .btn-primary {
+  background: #f4f4f2;
+  color: var(--accent);
+  border-color: #f4f4f2;
+}
+.dollar-erosion-text .btn-primary:hover {
+  background: transparent;
+  color: #f4f4f2;
+  border-color: rgba(244,244,242,0.6);
+}
+
+/* Visual: bars */
+.dollar-erosion-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.erosion-visual-label {
+  font-family: var(--jost);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(244,244,242,0.45);
+  margin-bottom: 0.5rem;
+}
+
+.erosion-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.erosion-bar-row {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.erosion-year {
+  font-family: var(--jost);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: rgba(244,244,242,0.45);
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.erosion-bar-track {
+  height: 44px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.erosion-bar-fill {
+  height: 100%;
+  width: var(--pct);
+  background: rgba(244,244,242,0.85);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.erosion-bar-fill--mid   { background: rgba(220,210,185,0.8); }
+.erosion-bar-fill--low   { background: rgba(185,165,120,0.8); }
+.erosion-bar-fill--danger { background: rgba(150,110,70,0.8); }
+
+.erosion-amount {
+  font-family: var(--cormorant);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.erosion-bar-fill--mid .erosion-amount,
+.erosion-bar-fill--low .erosion-amount,
+.erosion-bar-fill--danger .erosion-amount {
+  color: #f4f4f2;
+}
+
+.erosion-disclaimer {
+  font-size: 0.7rem;
+  color: rgba(244,244,242,0.28);
+  line-height: 1.7;
+  max-width: 460px;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .dollar-erosion-inner {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .dollar-erosion-body { max-width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .dollar-erosion { padding: 5rem 0; }
+  .dollar-erosion::after { display: none; }
+  .erosion-bar-row { grid-template-columns: 56px 1fr; gap: 0.75rem; }
+  .erosion-bar-track { height: 38px; }
+  .erosion-amount { font-size: 0.95rem; }
+}
+
+
 /* ─── RESPONSIVE — Tablet ────────────────────────────────────── */
 @media (max-width: 900px) {
 
