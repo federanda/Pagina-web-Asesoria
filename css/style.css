@@ -831,141 +831,390 @@ p { color: var(--text); }
 }
 
 
-/* ─── PYMES ──────────────────────────────────────────────────── */
-.pymes-tabs-section {
-  padding: 4rem 0 6rem;
-}
+/* ─── PYMES — REDISEÑO ───────────────────────────────────────── */
 
-.pymes-tabs-nav {
+/* HERO PYMES */
+.pymes-hero {
+  background: var(--accent);
+  min-height: calc(100vh - 64px);
   display: flex;
-  gap: 0;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 3rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.pymes-tab-btn {
-  font-family: var(--jost);
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  padding: 1rem 1.5rem;
-  border: none;
-  background: none;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
-  cursor: pointer;
-  transition: color var(--transition), border-color var(--transition);
-}
-.pymes-tab-btn:hover { color: var(--accent); }
-.pymes-tab-btn.active {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+/* Líneas horizontales sutiles de fondo */
+.pymes-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 79px,
+      rgba(255,255,255,0.03) 79px,
+      rgba(255,255,255,0.03) 80px
+    );
+  pointer-events: none;
 }
 
-.pymes-tab-panel { display: none; }
-.pymes-tab-panel.active { display: block; }
-
-.pymes-instruments-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.pymes-inst-card {
-  padding: 2rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface-alt);
-  cursor: pointer;
-  transition: border-color var(--transition), box-shadow var(--transition);
-}
-.pymes-inst-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 4px 24px rgba(62,74,61,0.07);
-}
-.pymes-inst-card--featured {
-  border-color: var(--secondary);
-  background: var(--surface);
-}
-.pymes-inst-card--featured:hover {
-  border-color: var(--accent);
-}
-
-.pymes-inst-tag {
-  font-size: 0.67rem;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--secondary);
-  margin-bottom: 0.75rem;
-}
-
-.pymes-inst-title {
+.pymes-hero-bg-text {
+  position: absolute;
+  right: -0.05em;
+  bottom: -0.25em;
   font-family: var(--cormorant);
-  font-size: 1.3rem;
+  font-size: clamp(14rem, 22vw, 22rem);
+  font-weight: 600;
+  color: rgba(255,255,255,0.04);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.02em;
+}
+
+.pymes-hero-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.pymes-hero-content .section-label {
+  color: var(--secondary);
+  opacity: 0.8;
+}
+
+.pymes-hero-title {
+  font-family: var(--cormorant);
+  font-size: clamp(3rem, 6.5vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  color: #f4f4f2;
+  margin-bottom: 1.75rem;
+  margin-top: 0.5rem;
+}
+
+.pymes-hero-title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--secondary);
+}
+
+.pymes-hero-sub {
+  font-size: 0.97rem;
+  color: rgba(244,244,242,0.60);
+  line-height: 1.85;
+  max-width: 500px;
+  margin-bottom: 2.5rem;
+}
+
+.pymes-hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.pymes-hero-cta .btn-primary {
+  background: #f4f4f2;
+  color: var(--accent);
+  border-color: #f4f4f2;
+}
+.pymes-hero-cta .btn-primary:hover {
+  background: transparent;
+  color: #f4f4f2;
+  border-color: rgba(244,244,242,0.5);
+}
+.pymes-hero-cta .btn-ghost {
+  color: rgba(244,244,242,0.7);
+  border-color: rgba(244,244,242,0.3);
+}
+.pymes-hero-cta .btn-ghost:hover {
+  background: rgba(244,244,242,0.08);
+  color: #f4f4f2;
+  border-color: rgba(244,244,242,0.5);
+}
+
+/* Stats verticales */
+.pymes-hero-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  border-left: 1px solid rgba(255,255,255,0.12);
+  padding-left: 3.5rem;
+}
+
+.pymes-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.pymes-stat-num {
+  font-family: var(--cormorant);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 300;
+  color: #f4f4f2;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.pymes-stat-label {
+  font-family: var(--jost);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(244,244,242,0.38);
+  line-height: 1.5;
+}
+
+.pymes-stat-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255,255,255,0.1);
+}
+
+/* SECCIÓN PROBLEMA */
+.pymes-problema {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.pymes-problema-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.pymes-problema-title {
+  font-family: var(--cormorant);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--accent);
+  line-height: 1.1;
+  margin-top: 0.5rem;
+}
+
+.pymes-problema-body p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+.pymes-problema-body p strong {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* INSTRUMENTOS — filas editoriales */
+.pymes-instrumentos,
+.pymes-bancario-section {
+  padding: 5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.pymes-bancario-section {
+  background: var(--surface-alt);
+}
+
+.pymes-inst-header {
+  margin-bottom: 3.5rem;
+}
+
+.pymes-inst-section-title {
+  font-family: var(--cormorant);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--accent);
+  line-height: 1.1;
+  margin-top: 0.5rem;
+}
+
+/* Fila de instrumento */
+.pymi-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 220px;
+  gap: 0 3rem;
+  padding: 3rem 0;
+  border-top: 1px solid var(--border);
+  align-items: start;
+  position: relative;
+  transition: background var(--transition);
+}
+
+.pymi-row:last-of-type {
+  border-bottom: 1px solid var(--border);
+}
+
+.pymi-row--featured {
+  background: var(--surface);
+  padding: 3rem 2rem;
+  border: 1px solid var(--secondary);
+  border-radius: var(--radius);
+  margin: 0 -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.pymi-row--featured .pymi-num {
+  color: var(--secondary);
+}
+
+.pymi-num {
+  font-family: var(--cormorant);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--border);
+  line-height: 1;
+  padding-top: 0.2rem;
+  user-select: none;
+  transition: color var(--transition);
+}
+
+.pymi-row:hover .pymi-num {
+  color: var(--secondary);
+}
+
+.pymi-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.85rem;
+}
+
+.pymi-tag {
+  font-family: var(--jost);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  background: rgba(62,74,61,0.08);
+  color: var(--accent);
+}
+
+.pymi-tag--gold {
+  background: rgba(140,120,81,0.12);
+  color: var(--secondary);
+}
+
+.pymi-tag--bank {
+  background: rgba(140,120,81,0.12);
+  color: var(--secondary);
+}
+
+.pymi-title {
+  font-family: var(--cormorant);
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
   font-weight: 500;
   color: var(--accent);
-  margin-bottom: 0.75rem;
+  line-height: 1.15;
+  margin-bottom: 0.85rem;
 }
 
-.pymes-inst-summary {
-  font-size: 0.88rem;
+.pymi-desc {
+  font-size: 0.92rem;
   color: var(--muted);
-  line-height: 1.7;
-  margin-bottom: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+  max-width: 520px;
 }
 
-.pymes-inst-details {
-  display: none;
-  margin-bottom: 1rem;
-}
-.pymes-inst-details ul {
+.pymi-list {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
-.pymes-inst-details ul li {
+
+.pymi-list li {
   font-size: 0.85rem;
   color: var(--text);
-  padding-left: 1rem;
+  padding-left: 1.1rem;
   position: relative;
+  line-height: 1.6;
 }
-.pymes-inst-details ul li::before {
+
+.pymi-list li::before {
   content: '—';
   position: absolute;
   left: 0;
   color: var(--secondary);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
-.pymes-inst-card.expanded .pymes-inst-details { display: block; }
-
-.pymes-expand-hint {
+/* Aside de datos */
+.pymi-aside {
   display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.7rem;
-  font-weight: 400;
+  flex-direction: column;
+  gap: 0;
+  border-left: 1px solid var(--border);
+  padding-left: 2rem;
+}
+
+.pymi-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.pymi-data:last-child { border-bottom: none; }
+
+.pymi-data-label {
+  font-family: var(--jost);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pymi-data-val {
+  font-family: var(--cormorant);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.pymi-canal {
+  display: inline-block;
+  font-family: var(--jost);
+  font-size: 0.65rem;
+  font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--secondary);
-  cursor: pointer;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
 }
 
-.pymes-inst-card.expanded .pymes-expand-hint svg {
-  transform: rotate(180deg);
+.pymi-canal--cap  { background: rgba(62,74,61,0.1);   color: var(--accent); }
+.pymi-canal--bank { background: rgba(140,120,81,0.12); color: var(--secondary); }
+
+/* TABLA COMPARATIVA */
+.pymes-comparativa {
+  padding: 5rem 0 6rem;
+  border-top: 1px solid var(--border);
 }
 
-/* Comparativa tabla */
-.pymes-compare-section { padding: 1rem 0; }
-
-.pymes-compare-title {
+.pymes-comparativa-title {
   font-family: var(--cormorant);
-  font-size: 1.5rem;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 400;
   color: var(--accent);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  margin-top: 0.5rem;
 }
 
 .pymes-table-wrap {
@@ -981,63 +1230,149 @@ p { color: var(--text); }
 }
 
 .pymes-compare-table thead {
-  background: var(--surface);
+  background: var(--accent);
 }
 
 .pymes-compare-table th {
   padding: 1rem 1.25rem;
   text-align: left;
   font-family: var(--jost);
-  font-size: 0.68rem;
+  font-size: 0.63rem;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--muted);
-  border-bottom: 1px solid var(--border);
+  color: rgba(244,244,242,0.55);
+  border-bottom: none;
 }
 
 .pymes-compare-table td {
-  padding: 0.9rem 1.25rem;
+  padding: 1rem 1.25rem;
   border-bottom: 1px solid var(--border);
   color: var(--text);
   vertical-align: middle;
 }
 
+.td-num {
+  font-family: var(--cormorant);
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--border);
+  width: 48px;
+}
+
 .pymes-compare-table tr:last-child td { border-bottom: none; }
-.pymes-compare-table tr:hover td { background: var(--surface-alt); }
+.pymes-compare-table tbody tr:hover td { background: var(--surface-alt); }
+
+.tr-featured td {
+  background: rgba(140,120,81,0.05);
+}
+.tr-featured:hover td {
+  background: rgba(140,120,81,0.09) !important;
+}
+.tr-featured .td-num {
+  color: var(--secondary);
+}
 
 .pymes-tag {
   display: inline-block;
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.25rem 0.65rem;
   border-radius: 20px;
 }
-.pymes-tag--cap  { background: rgba(62,74,61,0.1);  color: var(--accent); }
-.pymes-tag--bank { background: rgba(140,120,81,0.1); color: var(--secondary); }
+.pymes-tag--cap  { background: rgba(62,74,61,0.1);   color: var(--accent); }
+.pymes-tag--bank { background: rgba(140,120,81,0.12); color: var(--secondary); }
 
-/* CTA pymes */
-.pymes-cta {
-  margin-top: 4rem;
-  padding: 3.5rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface);
-  text-align: center;
+/* CTA FINAL — oscuro */
+.pymes-cta-final {
+  background: var(--accent);
+  padding: 7rem 0;
+  position: relative;
+  overflow: hidden;
 }
-.pymes-cta-title {
+
+.pymes-cta-final::after {
+  content: '→';
+  position: absolute;
+  right: 2rem;
+  bottom: -0.2em;
   font-family: var(--cormorant);
-  font-size: 1.75rem;
-  color: var(--accent);
+  font-size: clamp(12rem, 20vw, 20rem);
+  color: rgba(255,255,255,0.04);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.pymes-cta-final-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem 6rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.pymes-cta-final .section-label {
+  color: var(--secondary);
+  opacity: 0.8;
+}
+
+.pymes-cta-final-title {
+  font-family: var(--cormorant);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  color: #f4f4f2;
+  line-height: 1.1;
+  margin-top: 0.5rem;
   margin-bottom: 0.75rem;
 }
-.pymes-cta-text {
-  font-size: 0.9rem;
-  color: var(--muted);
+
+.pymes-cta-final-body {
+  font-size: 0.92rem;
+  color: rgba(244,244,242,0.55);
+  line-height: 1.85;
   max-width: 480px;
-  margin: 0 auto 2rem;
+}
+
+.pymes-cta-final-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 220px;
+}
+
+.pymes-cta-btn-wa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background: #f4f4f2;
+  color: var(--accent);
+  font-family: var(--jost);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+}
+.pymes-cta-btn-wa:hover {
+  background: rgba(244,244,242,0.9);
+}
+
+.pymes-cta-btn-mail {
+  color: rgba(244,244,242,0.7);
+  border-color: rgba(244,244,242,0.3);
+  justify-content: center;
+}
+.pymes-cta-btn-mail:hover {
+  background: rgba(244,244,242,0.08);
+  color: #f4f4f2;
+  border-color: rgba(244,244,242,0.5);
 }
 
 
@@ -1779,6 +2114,81 @@ p { color: var(--text); }
 
   .activos-grid { grid-template-columns: 1fr; }
 
+  .pymes-hero-inner {
+    grid-template-columns: 1fr;
+    padding: 4rem 2rem 5rem;
+    gap: 3rem;
+  }
+
+  .pymes-hero-stats {
+    flex-direction: row;
+    border-left: none;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-left: 0;
+    padding-top: 2rem;
+    justify-content: center;
+    width: 100%;
+    gap: 0;
+  }
+
+  .pymes-stat {
+    padding: 0 2rem;
+    flex: 1;
+  }
+
+  .pymes-stat-divider {
+    width: 24px;
+    height: 1px;
+    align-self: center;
+  }
+
+  .pymes-problema-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .pymi-row {
+    grid-template-columns: 48px 1fr;
+    grid-template-rows: auto auto;
+    gap: 0 1.75rem;
+  }
+
+  .pymi-aside {
+    grid-column: 1 / -1;
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding-left: 0;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .pymi-data {
+    flex: 1;
+    min-width: 140px;
+    padding: 0 1.5rem 1rem 0;
+    border-bottom: none;
+  }
+
+  .pymi-row--featured {
+    margin: 0;
+  }
+
+  .pymes-cta-final-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .pymes-cta-final-actions {
+    flex-direction: row;
+    min-width: unset;
+  }
+
+  .pymes-cta-btn-wa,
+  .pymes-cta-btn-mail { flex: 1; }
+
   .pymes-instruments-grid { grid-template-columns: 1fr; }
 
   .pricing-grid { grid-template-columns: 1fr; }
@@ -1869,6 +2279,34 @@ p { color: var(--text); }
   /* Activos */
   .activos-section { padding: 4rem 0; }
   .activo-item { padding: 1rem 1.25rem; }
+
+  /* Pymes rediseño mobile */
+  .pymes-hero { min-height: auto; }
+  .pymes-hero-inner { padding: 3rem 1.25rem 4rem; }
+  .pymes-hero-bg-text { display: none; }
+  .pymes-hero-cta { flex-direction: column; }
+  .pymes-hero-cta .btn { text-align: center; }
+
+  .pymes-stat { padding: 0 1rem; }
+  .pymes-stat-num { font-size: 2.5rem; }
+
+  .pymi-row {
+    grid-template-columns: 1fr;
+    padding: 2rem 0;
+  }
+  .pymi-num { font-size: 2rem; margin-bottom: 0.5rem; }
+  .pymi-row--featured { padding: 2rem 1.25rem; }
+
+  .pymi-aside {
+    flex-direction: column;
+    gap: 0;
+  }
+  .pymi-data { min-width: unset; padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+  .pymi-data:last-child { border-bottom: none; }
+
+  .pymes-cta-final { padding: 5rem 0; }
+  .pymes-cta-final::after { display: none; }
+  .pymes-cta-final-actions { flex-direction: column; }
 
   /* WhatsApp */
   .whatsapp-float {
