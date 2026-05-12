@@ -321,12 +321,77 @@ p { color: var(--text); }
   border-top: 1px solid var(--border);
 }
 
+/* Intro texto de servicios */
+.services-intro-title {
+  font-family: var(--cormorant);
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  max-width: 640px;
+}
+
+.services-intro-body {
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 680px;
+  line-height: 1.85;
+  margin-bottom: 3.5rem;
+}
+
+.services-intro-body strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Bloques de servicios separados */
+.services-block {
+  margin-bottom: 2.5rem;
+}
+
+.services-block--pymes {
+  margin-top: 3rem;
+}
+
+.services-block-label {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.services-block-tag {
+  font-family: var(--jost);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  white-space: nowrap;
+}
+
+.services-block-tag--pymes {
+  color: var(--accent);
+  opacity: 0.75;
+}
+
+.services-block-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Grillas */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   border: 1px solid var(--border);
-  margin-top: 2rem;
+}
+
+.services-grid--pymes {
+  background: var(--surface);
+  border-color: var(--border);
 }
 
 .service-card {
@@ -340,6 +405,19 @@ p { color: var(--text); }
 }
 .service-card:last-child { border-right: none; }
 .service-card:hover { background: var(--surface); }
+
+/* Cards de PyMES con fondo levemente diferenciado */
+.service-card--pymes {
+  background: #f0f0ec;
+}
+.service-card--pymes:hover {
+  background: var(--surface);
+}
+
+/* Cards de info sin link de ancla directa */
+.service-card--info {
+  cursor: default;
+}
 
 .service-icon {
   width: 36px;
@@ -367,6 +445,19 @@ p { color: var(--text); }
   text-transform: uppercase;
   color: var(--secondary);
   margin-top: auto;
+}
+
+.pymes-cta-link a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color var(--transition);
+}
+.pymes-cta-link a:hover {
+  color: var(--accent);
 }
 
 
@@ -2091,7 +2182,9 @@ p { color: var(--text); }
 
   .hero-name { font-size: clamp(3rem, 10vw, 5rem); }
 
-  .services-grid {
+  .services-grid,
+  .services-grid--personas,
+  .services-grid--pymes {
     grid-template-columns: 1fr;
     border: 1px solid var(--border);
   }
@@ -2100,6 +2193,9 @@ p { color: var(--text); }
     border-bottom: 1px solid var(--border);
   }
   .service-card:last-child { border-bottom: none; }
+
+  .services-intro-title { font-size: 1.75rem; }
+  .services-intro-body { margin-bottom: 2.5rem; }
 
   .about-grid {
     grid-template-columns: 1fr;
