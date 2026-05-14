@@ -244,7 +244,7 @@ p { color: var(--text); }
 
 .hero-text      { grid-area: text; }
 .hero-image-container { grid-area: image; }
-.hero-cta       { grid-area: cta; display: flex; gap: 1rem; align-items: center; }
+.hero-cta       { grid-area: cta; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
 
 .hero-eyebrow {
   font-family: var(--jost);
