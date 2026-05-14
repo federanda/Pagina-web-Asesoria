@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Acerca de mí | FR Asesoría Financiera</title>
+  <title>FR Asesoría Financiera | Federico Randazzo.</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 </head>
-<body class="page-about">
+<body class="page-home">
 
+  <!-- NAV -->
   <!-- ════════════════════════════════════════════════════════════════
      NAV UNIFICADO — pegar en TODAS las páginas (index, about,
      personas, pymes, costos, contacto).
@@ -45,116 +46,196 @@
   </div>
 </nav>
 
-  <main>
-    <!-- PAGE HEADER -->
-    <section class="page-header">
-      <div class="container">
-        <p class="section-label">Quién soy</p>
-        <h2 class="page-title">Acerca de mí</h2>
+  <!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+    <!-- 1. El bloque de texto principal -->
+    <div class="hero-text">
+       <h1 class="hero-name">Federico<br><span>Randazzo</span></h1>
+       <p class="hero-credential">Asesor Financiero Matriculado CNV</p>
+       <p class="hero-tagline">"Del ahorro a la inversión con criterio, seguridad y claridad."</p>
+    <div class="hero-divider"></div>
+    </div>
+    
+    <!-- 2. La imagen -->
+    <div class="hero-image-container">
+      <div class="hero-image-frame">
+        <img src="perfil.jpg" alt="Federico Randazzo" class="hero-img">
       </div>
-    </section>
+    </div>
 
-    <!-- BIO -->
-    <section class="about-bio">
-      <div class="container about-grid">
-        <div class="about-photo-col">
-          <div class="about-photo-frame">
-            <img src="perfil.jpg" alt="Federico Randazzo" class="about-photo">
-          </div>
+    <!-- 3. Los botones (ahora independientes para móviles) -->
+    <div class="hero-cta">
+      <a href="about.html" class="btn btn-primary">Conóceme</a>
+      <a href="personas.html" class="btn btn-ghost">Servicios a Personas</a>
+      <a href="pymes.html" class="btn btn-ghost">Asesoramiento PyMES</a>
+    </div>
+  </div>
+</section>
 
-          <div class="about-credential-box">
-            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-              <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
-              <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
-              <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
-            </svg>
-            <div>
-              <p class="cred-name">Federico Randazzo</p>
-              <p class="cred-title">Asesor Financiero Matriculado CNV</p>
-            </div>
-          </div>
+  <!-- INFLACIÓN DEL DÓLAR -->
+  <section class="dollar-erosion">
+    <div class="container">
+      <div class="dollar-erosion-inner">
+
+        <div class="dollar-erosion-text">
+          <p class="section-label">El costo de no invertir</p>
+          <h2 class="dollar-erosion-title">Tu dólar bajo el colchón<br>pierde valor cada año</h2>
+          <p class="dollar-erosion-body">
+            Muchos creen que guardar dólares en efectivo es sinónimo de seguridad. 
+            Pero el dólar también tiene inflación. En los últimos años, 
+            la inflación en EE.UU. promedió entre un <strong>3% y 9% anual</strong>. 
+            Eso significa que tu dinero quieto, parado, se derrite silenciosamente.
+          </p>
+          <a href="contacto.html" class="btn btn-primary">Hacé trabajar tu capital</a>
         </div>
 
-        <div class="about-text-col">
-          <h3 class="about-subtitle">Un camino poco convencional hacia las finanzas</h3>
-          <p>Soy Médico Veterinario con más de 15 años de ejercicio profesional. Durante ese tiempo, como cualquier profesional independiente, me enfrenté a la necesidad de cuidar mis ahorros y proteger el fruto de años de trabajo.</p>
-          <p>Esa inquietud me llevó a adentrarme en el mundo de las inversiones, donde encontré una nueva pasión. Lo que comenzó como una necesidad personal se convirtió en una vocación: entender los mercados, aprender sobre instrumentos financieros y construir estrategias que realmente funcionen.</p>
-          <p>A partir de ese momento, decidí formarme de manera rigurosa para poder brindar estas experiencias y conocimientos a otras personas, acompañándolas en el camino de hacer crecer y preservar su capital.</p>
+        <div class="dollar-erosion-visual">
+          <p class="erosion-visual-label">USD 10.000 guardados hoy valen en poder adquisitivo…</p>
+          <div class="erosion-bars">
 
-          <div class="about-divider"></div>
+            <div class="erosion-bar-row">
+              <span class="erosion-year">Hoy</span>
+              <div class="erosion-bar-track">
+                <div class="erosion-bar-fill" style="--pct: 100%">
+                  <span class="erosion-amount">$10.000</span>
+                </div>
+              </div>
+            </div>
 
-          <h3 class="about-subtitle">Formación académica y profesional</h3>
+            <div class="erosion-bar-row">
+              <span class="erosion-year">3 años</span>
+              <div class="erosion-bar-track">
+                <div class="erosion-bar-fill erosion-bar-fill--mid" style="--pct: 83%">
+                  <span class="erosion-amount">$8.300</span>
+                </div>
+              </div>
+            </div>
 
-          <div class="formation-list">
-            <div class="formation-item">
-              <div class="formation-year">2026</div>
-              <div class="formation-content">
-                <p class="formation-title">Idóneo en Mercado de Capitales — <strong>Comisión Nacional de Valores (CNV)</strong></p>
-                <p class="formation-desc">Examen oficial aprobado en abril 2026 para operar como asesor habilitado en el mercado de capitales argentino.</p>
+            <div class="erosion-bar-row">
+              <span class="erosion-year">5 años</span>
+              <div class="erosion-bar-track">
+                <div class="erosion-bar-fill erosion-bar-fill--low" style="--pct: 71%">
+                  <span class="erosion-amount">$7.100</span>
+                </div>
               </div>
             </div>
-            <div class="formation-item">
-              <div class="formation-year">En curso</div>
-              <div class="formation-content">
-                <p class="formation-title">Analista Universitario de Datos — <strong>CNV</strong></p>
-                <p class="formation-desc">Carrera universitaria en curso, orientada al análisis cuantitativo de datos financieros y de mercados.</p>
+
+            <div class="erosion-bar-row">
+              <span class="erosion-year">10 años</span>
+              <div class="erosion-bar-track">
+                <div class="erosion-bar-fill erosion-bar-fill--danger" style="--pct: 50%">
+                  <span class="erosion-amount">$5.000</span>
+                </div>
               </div>
             </div>
-            <div class="formation-item">
-              <div class="formation-year">ICB</div>
-              <div class="formation-content">
-                <p class="formation-title">Curso AGI — <strong>Instituto de Capacitación Bursátil</strong></p>
-                <p class="formation-desc">Formación especializada en gestión e inversión en mercados financieros.</p>
-              </div>
+
+          </div>
+          <p class="erosion-disclaimer">Estimación basada en inflación anual promedio del 6–7% en EE.UU. (IPC 2021–2024). No incluye impuestos ni comisiones. Solo ilustra el impacto del poder adquisitivo.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS RESUMEN -->
+  <section class="services-preview">
+    <div class="container">
+      <p class="section-label">Servicios</p>
+      <h2 class="services-intro-title">Asesoría financiera para personas y empresas</h2>
+      <p class="services-intro-body">Brindo asesoramiento personalizado tanto a <strong>personas humanas y jurídicas</strong> que buscan hacer crecer y preservar su patrimonio, como a <strong>PyMES</strong> que necesitan herramientas de financiamiento y gestión de capital a través del mercado de capitales y el sistema bancario.</p>
+
+      <!-- BLOQUE PERSONAS HUMANAS Y JURÍDICAS -->
+      <div class="services-block">
+        <div class="services-block-label">
+          <span class="services-block-tag">Personas Humanas &amp; Jurídicas</span>
+          <div class="services-block-line"></div>
+        </div>
+        <div class="services-grid services-grid--personas">
+          <a href="personas.html" class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 4C12.13 4 9 7.13 9 11s3.13 7 7 7 7-3.13 7-7-3.13-7-7-7zm0 18c-4.67 0-14 2.34-14 7v1h28v-1c0-4.66-9.33-7-14-7z" fill="var(--accent)" opacity="0.7"/>
+              </svg>
             </div>
-            <div class="formation-item">
-              <div class="formation-year">UNLU</div>
-              <div class="formation-content">
-                <p class="formation-title">Python para Finanzas — <strong>Universidad Nacional de Luján</strong></p>
-                <p class="formation-desc">Programación aplicada al análisis y automatización de estrategias financieras.</p>
-              </div>
+            <h3>Inversores Particulares</h3>
+            <p>Carteras diseñadas según tu perfil de riesgo, horizonte temporal y objetivos financieros.</p>
+            <span class="card-link">Ver más →</span>
+          </a>
+          <a href="guiadelinversor.html" class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 4h14l6 6v18H6V4z" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+                <path d="M20 4v6h6" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+                <path d="M10 14h12M10 18h12M10 22h7" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+              </svg>
             </div>
-            <div class="formation-item">
-              <div class="formation-year">+</div>
-              <div class="formation-content">
-                <p class="formation-title">Manejo de Derivados Financieros</p>
-                <p class="formation-desc">Instrumentos derivados: opciones, futuros y estrategias de cobertura.</p>
-              </div>
+            <h3>Guía del Inversor</h3>
+            <p>Recursos educativos y herramientas para entender los mercados y tomar decisiones informadas.</p>
+            <span class="card-link">Ver más →</span>
+          </a>
+          <a href="about.html" class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M28 6H4a2 2 0 00-2 2v16a2 2 0 002 2h24a2 2 0 002-2V8a2 2 0 00-2-2z" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+                <path d="M8 12h16M8 16h12M8 20h8" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+              </svg>
             </div>
-            <div class="formation-item">
-              <div class="formation-year">+</div>
-              <div class="formation-content">
-                <p class="formation-title">Financiamiento PyMES</p>
-                <p class="formation-desc">Herramientas de acceso al crédito y capital para pequeñas y medianas empresas a través del mercado de capitales y el sistema bancario.</p>
-              </div>
+            <h3>Mi Trayectoria</h3>
+            <p>Formación sólida en mercados financieros, derivados, análisis de datos y mercado de capitales.</p>
+            <span class="card-link">Ver más →</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- BLOQUE PYMES -->
+      <div class="services-block services-block--pymes">
+        <div class="services-block-label">
+          <span class="services-block-tag services-block-tag--pymes">PyMES</span>
+          <div class="services-block-line"></div>
+        </div>
+        <div class="services-grid services-grid--pymes">
+          <a href="pymes.html" class="service-card service-card--pymes">
+            <div class="service-icon">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="10" width="26" height="18" rx="1" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+                <path d="M10 10V7a6 6 0 0112 0v3" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+                <circle cx="16" cy="19" r="2" fill="var(--accent)" opacity="0.7"/>
+              </svg>
             </div>
+            <h3>Financiamiento PyMES</h3>
+            <p>Herramientas del mercado de capitales y bancario para potenciar el crecimiento de tu empresa.</p>
+            <span class="card-link">Ver más →</span>
+          </a>
+          <div class="service-card service-card--pymes service-card--info">
+            <div class="service-icon">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="12" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+                <path d="M16 14v8M16 10v2" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+              </svg>
+            </div>
+            <h3>Cheques &amp; ONs</h3>
+            <p>Descuento de cheques, emisión de Obligaciones Negociables y acceso al crédito con tasas competitivas.</p>
+            <span class="card-link pymes-cta-link"><a href="pymes.html">Conocer opciones →</a></span>
+          </div>
+          <div class="service-card service-card--pymes service-card--info">
+            <div class="service-icon">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 24l8-8 5 5 11-13" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+                <circle cx="26" cy="8" r="2" fill="var(--accent)" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3>Gestión de Excedentes</h3>
+            <p>Colocación eficiente del capital ocioso de tu empresa en instrumentos de renta fija y money market.</p>
+            <span class="card-link pymes-cta-link"><a href="pymes.html">Ver instrumentos →</a></span>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- VALUES -->
-    <section class="values">
-      <div class="container">
-        <p class="section-label">Mi enfoque</p>
-        <div class="values-grid">
-          <div class="value-item">
-            <h4>Preservación del capital</h4>
-            <p>El primer objetivo siempre es no perder. Construir sobre bases sólidas antes de buscar rendimientos excepcionales.</p>
-          </div>
-          <div class="value-item">
-            <h4>Estrategia personalizada</h4>
-            <p>No existen carteras universales. Cada inversor tiene objetivos, tiempos y tolerancias al riesgo diferentes.</p>
-          </div>
-          <div class="value-item">
-            <h4>Educación financiera</h4>
-            <p>Asesorar no es decidir por el cliente, sino darle las herramientas para tomar decisiones informadas y conscientes.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-logo">
