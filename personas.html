@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Asesoría Personal | FR Asesoría Financiera</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/personas.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js" defer></script>
 </head>
 <body class="page-personas">
 
-  <!-- NAV (el que ya tenías) -->
+  <!-- ─── NAV ─────────────────────────────────────────────────── -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
@@ -20,7 +23,6 @@
           <line x1="8" y1="50" x2="56" y2="50" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
         </svg>
       </a>
-
       <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="about.html">Acerca de mí</a></li>
@@ -29,7 +31,6 @@
         <li><a href="guiadelinversor.html">Guia del Inversor</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
-
       <button class="nav-toggle" aria-label="Menú">
         <span></span><span></span><span></span>
       </button>
@@ -37,6 +38,8 @@
   </nav>
 
   <main>
+
+    <!-- ─── PAGE HEADER ──────────────────────────────────────────── -->
     <section class="page-header">
       <div class="container">
         <p class="section-label">Asesoría Particular</p>
@@ -45,95 +48,349 @@
       </div>
     </section>
 
-    <!-- Nueva sección compacta -->
-    <section class="personas-compact">
+    <!-- ─── SECCIÓN 1: EL PROBLEMA ───────────────────────────────── -->
+    <section class="personas-section">
       <div class="container">
+        <p class="section-label">El problema real</p>
+        <h2 class="section-title-personas">La mayoría ahorra.<br>Pocos invierten.</h2>
+        <p class="section-sub">Rendimiento anualizado promedio en los últimos 10 años</p>
 
-        <div class="section-label">El problema real</div>
-        <h2 class="section-title">La mayoría ahorra.<br>Pocos invierten.</h2>
-
-        <div class="comparison-bars">
-          <h3>Ahorro en dólares vs Inversión (S&amp;P 500) — 10 años</h3>
-          <div class="bars-container">
-            <div class="bar-group">
-              <div class="bar-label">Ahorro USD</div>
-              <div class="bar bar-ahorro" style="width: 18%;">≈ 1.5%</div>
-            </div>
-            <div class="bar-group">
-              <div class="bar-label">Inversión (S&amp;P 500)</div>
-              <div class="bar bar-inversion" style="width: 85%;">≈ 11% anual</div>
-            </div>
+        <!-- Tarjetas de métricas -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-num metric-num--muted">1.5%</span>
+            <span class="metric-label">Caja de ahorro USD</span>
+            <span class="metric-sub">Rendimiento anual</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-num metric-num--green">9%</span>
+            <span class="metric-label">FCI Dólar / ON</span>
+            <span class="metric-sub">Rendimiento anual</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-num metric-num--blue">11%</span>
+            <span class="metric-label">S&amp;P 500 (ETF)</span>
+            <span class="metric-sub">Promedio histórico</span>
           </div>
         </div>
 
-        <div class="comparativa-section">
-          <h3>Departamento vs Inversión en ON / FCI Dólar</h3>
-          <table class="comparativa-table">
-            <thead>
-              <tr>
-                <th>Aspecto</th>
-                <th>Departamento</th>
-                <th>ON / FCI Dólar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Inversión inicial</td><td>Alta (US$80k+)</td><td>Baja (desde US$1.000)</td></tr>
-              <tr><td>Gastos mantenimiento</td><td>Altos</td><td>Muy bajos</td></tr>
-              <tr><td>Rentabilidad esperada</td><td>3-6%</td><td class="highlight-row">8-11%</td></tr>
-              <tr><td>Liquidez</td><td>Baja (meses)</td><td>Alta (días)</td></tr>
-            </tbody>
-          </table>
+        <!-- Leyenda -->
+        <div class="chart-legend">
+          <span class="chart-legend-item">
+            <span class="chart-legend-sq" style="background:#9e9d96"></span>
+            Caja de ahorro USD
+          </span>
+          <span class="chart-legend-item">
+            <span class="chart-legend-sq" style="background:#2a7d5e"></span>
+            FCI Dólar / ON
+          </span>
+          <span class="chart-legend-item">
+            <span class="chart-legend-sq" style="background:#3e4a3d"></span>
+            S&amp;P 500 (ETF)
+          </span>
         </div>
 
-        <div class="compound-section">
-          <h3>La magia del interés compuesto</h3>
-          <div class="compound-grid">
-            <div class="compound-result">
-              <p><strong>US$10.000 al 10% anual</strong></p>
-              <ul>
-                <li><span>10 años</span> <strong>≈ $25.900</strong></li>
-                <li><span>20 años</span> <strong>≈ $67.300</strong></li>
-                <li><span>30 años</span> <strong>≈ $174.500</strong></li>
-              </ul>
-            </div>
-            <div class="compound-visual">
-              <svg viewBox="0 0 300 160" width="100%" height="160">
-                <path d="M20 140 Q80 110 140 70 Q200 40 280 15" fill="none" stroke="#3e4a3d" stroke-width="10" stroke-linecap="round"/>
-                <path d="M20 140 Q80 110 140 70 Q200 40 280 15" fill="none" stroke="#d4b88a" stroke-width="5" stroke-linecap="round"/>
-              </svg>
-            </div>
-          </div>
+        <!-- Gráfico de barras -->
+        <div class="chart-wrap" style="height: 220px;">
+          <canvas id="chart-rendimientos"
+            role="img"
+            aria-label="Comparativa de rendimientos: Caja de ahorro 1.5%, FCI Dólar 9%, S&P 500 11% anual">
+            Caja de ahorro 1.5%, FCI Dólar 9%, S&P 500 11% anual.
+          </canvas>
         </div>
-
-        <!-- Carteras (mantengo tu sección original) -->
-        <section class="portfolios-simple">
-          <div class="container">
-            <div class="section-label">Modelos Sugeridos</div>
-            <div class="grid-carteras">
-              <!-- Tus cards originales van aquí -->
-              <div class="card"> ... (mantené tus 3 cards) </div>
-            </div>
-          </div>
-        </section>
-
-        <div class="cta-perfil">
-          <h2 class="frase-grande">¿Qué tipo de inversor sos?</h2>
-          <p class="frase-sub">Hacé el test y recibí tu perfil + recomendación personalizada</p>
-          <button onclick="document.getElementById('test-perfil').scrollIntoView({ behavior: 'smooth' });" class="btn btn-primary">
-            Hacer el Test de Perfil →
-          </button>
-        </div>
-
       </div>
     </section>
 
-    <!-- Tu test actual -->
-    <section id="test-perfil"> ... (tu código del test) </section>
+    <!-- ─── SECCIÓN 2: INTERÉS COMPUESTO ─────────────────────────── -->
+    <section class="personas-section personas-section--alt">
+      <div class="container">
+        <p class="section-label">El poder del tiempo</p>
+        <h2 class="section-title-personas">La magia del interés compuesto</h2>
+        <p class="section-sub">Cómo crece US$10.000 invertidos según tasa y horizonte</p>
+
+        <!-- Tabs de tasa -->
+        <div class="rate-tabs" id="rate-tabs" role="group" aria-label="Seleccionar tasa de interés">
+          <button class="rate-tab rate-tab--active" data-rate="7">7% anual</button>
+          <button class="rate-tab" data-rate="10">10% anual</button>
+          <button class="rate-tab" data-rate="12">12% anual</button>
+        </div>
+
+        <!-- Tarjetas de resultado -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-num metric-num--accent" id="ci-10">$19.672</span>
+            <span class="metric-label">En 10 años</span>
+            <span class="metric-sub">Desde US$10.000</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-num metric-num--accent" id="ci-20">$38.697</span>
+            <span class="metric-label">En 20 años</span>
+            <span class="metric-sub">Desde US$10.000</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-num metric-num--accent" id="ci-30">$76.123</span>
+            <span class="metric-label">En 30 años</span>
+            <span class="metric-sub">Desde US$10.000</span>
+          </div>
+        </div>
+
+        <!-- Leyenda -->
+        <div class="chart-legend" style="margin-top: 1.5rem;">
+          <span class="chart-legend-item">
+            <span class="chart-legend-sq" style="background: rgba(62,74,61,0.25); border: 1px dashed #3e4a3d;"></span>
+            Capital inicial
+          </span>
+          <span class="chart-legend-item">
+            <span class="chart-legend-sq" style="background:#3e4a3d"></span>
+            Crecimiento acumulado
+          </span>
+        </div>
+
+        <!-- Gráfico de línea -->
+        <div class="chart-wrap" style="height: 280px;">
+          <canvas id="chart-compuesto"
+            role="img"
+            aria-label="Gráfico de línea mostrando el crecimiento de US$10.000 con interés compuesto a lo largo de 30 años">
+            Crecimiento de US$10.000 con interés compuesto a lo largo de 30 años.
+          </canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECCIÓN 3: COMPARATIVA DEPARTAMENTO vs ON ─────────────── -->
+    <section class="personas-section">
+      <div class="container">
+        <p class="section-label">Comparativa de activos</p>
+        <h2 class="section-title-personas">Departamento vs ON / FCI Dólar</h2>
+        <p class="section-sub">Análisis multidimensional: rendimiento, liquidez y accesibilidad</p>
+
+        <div class="comparativa-layout">
+
+          <!-- Gráfico radar -->
+          <div>
+            <div class="chart-legend" style="margin-bottom: 1rem;">
+              <span class="chart-legend-item">
+                <span class="chart-legend-sq" style="background:#9e9d96"></span>
+                Departamento
+              </span>
+              <span class="chart-legend-item">
+                <span class="chart-legend-sq" style="background:#3e4a3d"></span>
+                ON / FCI Dólar
+              </span>
+            </div>
+            <div class="chart-wrap" style="height: 300px;">
+              <canvas id="chart-radar"
+                role="img"
+                aria-label="Gráfico radar comparando departamento versus ON en cinco dimensiones">
+                Comparativa radar entre departamento y ON/FCI dólar en cinco dimensiones.
+              </canvas>
+            </div>
+          </div>
+
+          <!-- Tabla de comparativa -->
+          <div class="comparativa-table-wrap">
+            <table class="comparativa-table">
+              <thead>
+                <tr>
+                  <th>Aspecto</th>
+                  <th>Departamento</th>
+                  <th>ON / FCI Dólar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Inversión inicial</td>
+                  <td>Alta (US$80k+)</td>
+                  <td class="td-highlight">Desde US$1.000</td>
+                </tr>
+                <tr>
+                  <td>Mantenimiento</td>
+                  <td>Alto</td>
+                  <td class="td-highlight">Mínimo</td>
+                </tr>
+                <tr>
+                  <td>Rentabilidad</td>
+                  <td>3–6% anual</td>
+                  <td class="td-highlight">8–11% anual</td>
+                </tr>
+                <tr>
+                  <td>Liquidez</td>
+                  <td>Baja (meses)</td>
+                  <td class="td-highlight">Alta (días)</td>
+                </tr>
+                <tr>
+                  <td>Diversificación</td>
+                  <td>Baja</td>
+                  <td class="td-highlight">Alta</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECCIÓN 4: CARTERAS SUGERIDAS ────────────────────────── -->
+    <section class="personas-section personas-section--alt">
+      <div class="container">
+        <p class="section-label">Modelos sugeridos</p>
+        <h2 class="section-title-personas">Carteras según perfil</h2>
+        <p class="section-sub">Seleccioná el modelo que se ajuste a tu horizonte y tolerancia al riesgo</p>
+
+        <div class="carteras-grid">
+
+          <!-- Conservador -->
+          <div class="cartera-card">
+            <div class="cartera-tag cartera-tag--conservador">Conservador</div>
+            <h3 class="cartera-name">Preservación</h3>
+            <p class="cartera-desc">Prioriza estabilidad y capital garantizado en dólares. Ideal para quienes buscan proteger lo acumulado.</p>
+            <div class="cartera-chart-wrap">
+              <canvas id="chart-cartera-c"
+                role="img"
+                aria-label="Distribución cartera conservadora: 50% Money Market, 30% ON grado inversión, 15% Lecap, 5% Cedears">
+                50% Money Market, 30% ON grado inversión, 15% Lecap, 5% Cedears.
+              </canvas>
+            </div>
+            <ul class="cartera-items">
+              <li>50% Fondos Money Market</li>
+              <li>30% ON grado inversión</li>
+              <li>15% Lecap / Lebac</li>
+              <li>5% Cedears defensivos</li>
+            </ul>
+            <div class="cartera-footer">
+              Rend. esperado: <strong class="cartera-rend cartera-rend--c">6–8% USD</strong>
+            </div>
+          </div>
+
+          <!-- Moderado -->
+          <div class="cartera-card cartera-card--featured">
+            <div class="cartera-tag cartera-tag--moderado">Moderado</div>
+            <h3 class="cartera-name">Crecimiento</h3>
+            <p class="cartera-desc">Balance entre renta fija y variable con horizonte de 3 a 5 años. El perfil más frecuente.</p>
+            <div class="cartera-chart-wrap">
+              <canvas id="chart-cartera-m"
+                role="img"
+                aria-label="Distribución cartera moderada: 35% ON corporativas, 25% FCI Dólar, 25% Cedears, 15% ETFs">
+                35% ON corporativas, 25% FCI Dólar, 25% Cedears, 15% ETFs.
+              </canvas>
+            </div>
+            <ul class="cartera-items">
+              <li>35% ON corporativas</li>
+              <li>25% FCI Dólar</li>
+              <li>25% Cedears diversificados</li>
+              <li>15% ETFs globales</li>
+            </ul>
+            <div class="cartera-footer">
+              Rend. esperado: <strong class="cartera-rend cartera-rend--m">9–12% USD</strong>
+            </div>
+          </div>
+
+          <!-- Agresivo -->
+          <div class="cartera-card">
+            <div class="cartera-tag cartera-tag--agresivo">Agresivo</div>
+            <h3 class="cartera-name">Máx. Retorno</h3>
+            <p class="cartera-desc">Orientado a renta variable con horizonte de 5 años o más. Mayor volatilidad, mayor potencial.</p>
+            <div class="cartera-chart-wrap">
+              <canvas id="chart-cartera-a"
+                role="img"
+                aria-label="Distribución cartera agresiva: 50% Cedears tecnológicos, 25% ETFs, 15% acciones locales, 10% ON high yield">
+                50% Cedears tecnológicos, 25% ETFs, 15% acciones locales, 10% ON high yield.
+              </canvas>
+            </div>
+            <ul class="cartera-items">
+              <li>50% Cedears tecnológicos</li>
+              <li>25% ETFs S&amp;P 500 / Nasdaq</li>
+              <li>15% Acciones locales</li>
+              <li>10% ON high yield</li>
+            </ul>
+            <div class="cartera-footer">
+              Rend. esperado: <strong class="cartera-rend cartera-rend--a">12–18% USD</strong>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA TEST DE PERFIL ────────────────────────────────────── -->
+    <section class="cta-perfil-section">
+      <div class="container">
+        <div class="cta-perfil-inner">
+          <div>
+            <p class="section-label" style="color: var(--secondary); opacity: 0.8;">Descubrí tu perfil</p>
+            <h2 class="cta-perfil-title">¿Qué tipo de inversor sos?</h2>
+            <p class="cta-perfil-sub">Respondé 6 preguntas y recibí tu perfil de riesgo + recomendación personalizada de cartera.</p>
+          </div>
+          <div class="cta-perfil-actions">
+            <button
+              class="btn btn-primary"
+              onclick="document.getElementById('test-perfil').scrollIntoView({ behavior: 'smooth' });">
+              Hacer el test de perfil →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── TEST DE PERFIL ────────────────────────────────────────── -->
+    <section id="test-perfil" class="personas-section">
+      <div class="container">
+        <p class="section-label">Test de perfil</p>
+        <h2 class="section-title-personas">¿Cuál es tu perfil de inversor?</h2>
+        <p class="section-sub">6 preguntas rápidas para conocer tu tolerancia al riesgo y horizonte de inversión.</p>
+
+        <div id="quiz-box">
+          <p id="contador" class="section-label">Pregunta 1 de 6</p>
+          <p id="pregunta-texto">¿Cuánto tiempo podés dejar tu dinero invertido sin necesitarlo?</p>
+          <div id="opciones-container"></div>
+        </div>
+
+        <div id="resultado-box" style="display: none;">
+          <p class="section-label">Tu perfil</p>
+          <h3>Sos un inversor <span id="perfil-nombre"></span></h3>
+          <p id="perfil-desc"></p>
+          <a href="contacto.html" class="btn btn-primary">Hablar con un asesor →</a>
+          <button
+            onclick="reiniciarQuiz()"
+            class="btn btn-ghost"
+            style="margin-top: 0.75rem;">
+            Repetir el test
+          </button>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="footer"> ... </footer>
+  <!-- ─── FOOTER ────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <svg width="28" height="28" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="60" height="60" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="8" y="44" font-family="Cormorant Garamond, serif" font-size="34" font-weight="500" fill="var(--accent)" letter-spacing="-1">FR</text>
+          </svg>
+          FR Asesoría Financiera
+        </div>
+        <p class="footer-legal">© 2025 FR Asesoría Financiera</p>
+        <p class="footer-disclaimer">
+          La información provista es de carácter educativo e informativo. No constituye asesoramiento financiero personalizado ni una oferta de inversión. Toda decisión de inversión implica riesgos. Consultá con un profesional antes de invertir.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/54XXXXXXXXXX" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
 
   <script src="js/main.js"></script>
+  <script src="js/personas-charts.js"></script>
   <script src="js/test.js"></script>
 </body>
 </html>
