@@ -2438,3 +2438,153 @@ p { color: var(--text); }
     flex-direction: column;
   }
 }
+/* ============================================= */
+/* NUEVA SECCIÓN - Asesoría Personas             */
+/* ============================================= */
+
+.problemas-section,
+.comparativa-section,
+.compuesto-section,
+.cta-perfil {
+    padding: 5.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-label {
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+/* Grid de gráficos */
+.graficos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.grafico-card {
+    background: var(--surface-alt);
+    padding: 2rem 1.8rem;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.grafico-card h3 {
+    margin-bottom: 1.2rem;
+    font-size: 1.25rem;
+}
+
+.grafico-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    margin: 1.5rem 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.grafico-caption {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
+/* Tabla comparativa */
+.comparativa-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2.5rem 0;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.comparativa-table th,
+.comparativa-table td {
+    padding: 1.1rem 1.4rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.comparativa-table th {
+    background: var(--accent);
+    color: white;
+    font-weight: 500;
+}
+
+.comparativa-table tr:last-child td {
+    border-bottom: none;
+}
+
+.disclaimer-table {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Interés Compuesto */
+.compuesto-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.compuesto-texto ul {
+    margin: 1.5rem 0;
+    padding-left: 1.2rem;
+}
+
+.compuesto-texto li {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+}
+
+.highlight {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-top: 1.5rem;
+}
+
+/* CTA Final */
+.cta-perfil {
+    background: linear-gradient(135deg, #3e4a3d, #2c352b);
+    color: #f4f4f2;
+    text-align: center;
+    border-bottom: none;
+}
+
+.frase-grande {
+    font-size: clamp(2.4rem, 6vw, 3.8rem);
+    line-height: 1.1;
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.frase-sub {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .compuesto-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .graficos-grid {
+        grid-template-columns: 1fr;
+    }
+}
