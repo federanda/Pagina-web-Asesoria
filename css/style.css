@@ -325,5 +325,93 @@ p { color: var(--text); }
   font-size: 1.45rem;
   margin-bottom: 0.5rem;
 }
+/* ============================================= */
+/* NUEVA SECCIÓN PERSONAS - VERSIÓN COMPACTA     */
+/* ============================================= */
+
+.personas-compact {
+  padding: 4rem 0;
+}
+
+.comparison-bars {
+  background: var(--surface-alt);
+  padding: 2rem;
+  border-radius: var(--radius);
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.bars-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin: 2rem 0;
+}
+
+.bar {
+  height: 42px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 14px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.bar-ahorro { background: #8c7851; }
+.bar-inversion { background: var(--accent); }
+
+.comparativa-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: white;
+}
+
+.comparativa-table th,
+.comparativa-table td {
+  padding: 1rem 1.3rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.comparativa-table th {
+  background: var(--accent);
+  color: white;
+}
+
+.highlight-row {
+  background: #f0f8f0;
+  font-weight: 600;
+}
+
+.compound-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin: 2.5rem 0;
+  padding: 2rem;
+  background: var(--surface-alt);
+  border-radius: var(--radius);
+}
+
+.cta-perfil {
+  background: linear-gradient(135deg, #3e4a3d, #2c352b);
+  color: #f4f4f2;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.frase-grande {
+  font-size: clamp(2.3rem, 5.5vw, 3.5rem);
+  line-height: 1.15;
+}
+
+@media (max-width: 768px) {
+  .compound-grid { grid-template-columns: 1fr; }
+}
 
 /* Quiz y Footer se mantienen igual (no los modifico) */
