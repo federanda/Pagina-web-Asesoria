@@ -1,10 +1,9 @@
 /* ============================================================
    FR ASESORÍA FINANCIERA — style.css
-   Elegante · Minimalista · Profesional
-   Fuentes: Cormorant Garamond (display) + Jost (body)
+   Versión FINAL - Completa y corregida (Mayo 2026)
+   Incluye todas las páginas + nueva sección Personas compacta
    ============================================================ */
 
-/* ─── RESET & BASE ─────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -41,20 +40,18 @@ body {
 }
 
 img { display: block; max-width: 100%; }
-a   { color: inherit; text-decoration: none; }
-ul  { list-style: none; }
-button { font-family: var(--jost); cursor: pointer; border: none; background: none; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
 
-
-/* ─── TIPOGRAFÍA GLOBAL ────────────────────────────────────── */
+/* ============================================= */
+/* TIPOGRAFÍA Y ESTILOS GENERALES                */
+/* ============================================= */
 h1, h2, h3, h4 {
   font-family: var(--cormorant);
   font-weight: 500;
   line-height: 1.15;
   color: var(--accent);
 }
-
-p { color: var(--text); }
 
 .section-label {
   font-family: var(--jost);
@@ -67,24 +64,19 @@ p { color: var(--text); }
 }
 
 .page-title {
-  font-family: var(--cormorant);
   font-size: clamp(2.8rem, 6vw, 4.5rem);
   font-weight: 400;
   line-height: 1.05;
-  color: var(--accent);
   margin-bottom: 1.25rem;
 }
 
 .page-subtitle {
   font-size: 1rem;
-  font-weight: 300;
   color: var(--muted);
   max-width: 560px;
   line-height: 1.75;
 }
 
-
-/* ─── CONTAINER ─────────────────────────────────────────────── */
 .container {
   width: 100%;
   max-width: var(--container);
@@ -92,11 +84,9 @@ p { color: var(--text); }
   padding: 0 2rem;
 }
 
-
-/* ─── BOTONES ───────────────────────────────────────────────── */
+/* Botones */
 .btn {
   display: inline-block;
-  font-family: var(--jost);
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.14em;
@@ -127,206 +117,52 @@ p { color: var(--text); }
   color: var(--bg);
 }
 
-
-/* ─── NAV, HERO, SERVICES, ABOUT, etc. (se mantienen igual) ─── */
-/* ... (todo tu CSS anterior hasta la sección de PERSONAS) ... */
-
-
-/* ─── PERSONAS - VERSIÓN COMPACTA ───────────────────────────── */
-.personas-compact {
-  padding: 4rem 0;
-}
-
-.comparison-bars {
-  background: var(--surface-alt);
-  padding: 2rem;
-  border-radius: var(--radius);
-  margin: 2.5rem 0;
-  text-align: center;
-}
-
-.bars-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
-  margin: 2rem 0;
-}
-
-.bar-group {
-  text-align: left;
-}
-
-.bar-label {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: var(--text);
-}
-
-.bar {
-  height: 42px;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 14px;
-  color: white;
-  font-weight: 600;
-  font-size: 1.05rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.bar-ahorro {
-  background: #8c7851;
-}
-
-.bar-inversion {
-  background: var(--accent);
-}
-
-.comparativa-section h3 {
-  margin: 2.5rem 0 1.2rem;
-}
-
-.comparativa-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  background: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-}
-
-.comparativa-table th,
-.comparativa-table td {
-  padding: 1rem 1.3rem;
-  text-align: left;
+/* Nav */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
 }
 
-.comparativa-table th {
-  background: var(--accent);
-  color: white;
-  font-weight: 500;
-}
-
-.highlight-row {
-  background: #f0f8f0;
-  font-weight: 600;
-}
-
-.compound-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-  margin: 2rem 0;
-  background: var(--surface-alt);
-  padding: 2rem;
-  border-radius: var(--radius);
-}
-
-.compound-result p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-.compound-result ul {
-  list-style: none;
-}
-
-.compound-result li {
+.nav-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--border);
 }
 
-.compound-result li:last-child {
-  border-bottom: none;
+.nav-logo svg { width: 40px; height: 40px; }
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
 }
 
-.compound-result strong {
+.nav-links a {
+  font-size: 0.72rem;
+  padding: 0.5rem 1rem;
+  color: var(--muted);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--accent);
 }
 
-.compound-curve {
-  background: #f8f5f0;
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  text-align: center;
-}
-
-.portfolios-simple {
-  padding: 5rem 0;
+/* Page Header */
+.page-header {
+  padding: 5rem 0 4rem;
   border-bottom: 1px solid var(--border);
-}
-
-.grid-carteras {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-/* CTA Final */
-.cta-perfil {
-  background: linear-gradient(135deg, #3e4a3d, #2c352b);
-  color: #f4f4f2;
-  text-align: center;
-  padding: 5rem 0;
-  border-bottom: none;
-}
-
-.frase-grande {
-  font-size: clamp(2.3rem, 5.5vw, 3.5rem);
-  line-height: 1.15;
-  max-width: 900px;
-  margin: 0 auto 1.5rem;
-  font-family: var(--cormorant);
-}
-
-.frase-sub {
-  font-size: 1.25rem;
-  max-width: 700px;
-  margin: 0 auto 2.5rem;
-  opacity: 0.9;
-}
-
-/* Responsive para personas */
-@media (max-width: 768px) {
-  .compound-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .grid-carteras {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ============================================= */
-/* MANTENEMOS EL RESTO DE TU CSS (footer, quiz, etc.) */
-/* ============================================= */
-
-.portfolios-simple .card {
-  padding: 2.25rem 2rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
   background: var(--surface-alt);
-  transition: all var(--transition);
 }
 
-.portfolios-simple .card:hover,
-.portfolios-simple .card.active {
-  border-color: var(--accent);
-  box-shadow: 0 4px 24px rgba(62,74,61,0.08);
-}
-
-.portfolios-simple .card h4 {
-  font-size: 1.45rem;
-  margin-bottom: 0.5rem;
-}
 /* ============================================= */
-/* NUEVA SECCIÓN PERSONAS - VERSIÓN COMPACTA     */
+/* NUEVA SECCIÓN PERSONAS - COMPACTA             */
 /* ============================================= */
 
 .personas-compact {
@@ -408,10 +244,79 @@ p { color: var(--text); }
 .frase-grande {
   font-size: clamp(2.3rem, 5.5vw, 3.5rem);
   line-height: 1.15;
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
 }
 
+.frase-sub {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.9;
+}
+
+/* ============================================= */
+/* ESTILOS ORIGINALES DE LAS DEMÁS PÁGINAS       */
+/* ============================================= */
+
+.portfolios-simple {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.grid-carteras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  padding: 2.25rem 2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+  transition: all var(--transition);
+}
+
+.card:hover, .card.active {
+  border-color: var(--accent);
+  box-shadow: 0 4px 24px rgba(62,74,61,0.08);
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 3rem 0;
+  background: var(--surface);
+  text-align: center;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* WhatsApp flotante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+}
+
+/* Responsive básico */
 @media (max-width: 768px) {
+  .container { padding: 0 1.25rem; }
   .compound-grid { grid-template-columns: 1fr; }
 }
-
-/* Quiz y Footer se mantienen igual (no los modifico) */
