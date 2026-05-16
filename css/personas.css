@@ -7,7 +7,7 @@
 /* ─── HERO COMPACTO ──────────────────────────────────────────── */
 
 .personas-hero {
-  padding: 4.5rem 0 3rem;
+  padding: 4.5rem 0 4rem;
   text-align: center;
   border-bottom: 1px solid var(--border);
   background: var(--surface);
@@ -29,62 +29,6 @@
   max-width: 500px;
   margin: 0 auto 2.5rem;
   line-height: 1.75;
-}
-
-/* Stats del hero */
-.hero-stats-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  max-width: 580px;
-  margin: 0 auto;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.hero-stat-card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5rem 1rem;
-  background: var(--bg);
-  gap: 3px;
-}
-
-.hero-stat-divider {
-  font-family: var(--cormorant);
-  font-size: 1.1rem;
-  color: var(--muted);
-  padding: 0 0.5rem;
-  flex-shrink: 0;
-  opacity: 0.5;
-}
-
-.hero-stat-num {
-  font-family: var(--cormorant);
-  font-size: 2.8rem;
-  font-weight: 500;
-  line-height: 1;
-}
-
-.hero-stat--muted  { color: var(--border); }
-.hero-stat--green  { color: #2a7d5e; }
-.hero-stat--accent { color: var(--accent); }
-
-.hero-stat-label {
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  color: var(--text);
-  text-transform: uppercase;
-}
-
-.hero-stat-sub {
-  font-size: 0.68rem;
-  color: var(--muted);
 }
 
 
@@ -555,10 +499,6 @@
 
 @media (max-width: 900px) {
 
-  .hero-stats-row {
-    max-width: 420px;
-  }
-
   .comparativa-cards {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -598,26 +538,6 @@
 
   .personas-hero {
     padding: 3rem 0 2.5rem;
-  }
-
-  .hero-stats-row {
-    flex-direction: column;
-    max-width: 100%;
-    gap: 0;
-  }
-
-  .hero-stat-card {
-    width: 100%;
-    border-bottom: 1px solid var(--border);
-    padding: 1.1rem 1rem;
-  }
-
-  .hero-stat-card:last-child {
-    border-bottom: none;
-  }
-
-  .hero-stat-divider {
-    display: none;
   }
 
   .personas-section {
