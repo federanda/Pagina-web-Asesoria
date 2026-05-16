@@ -1,13 +1,97 @@
 /* ============================================================
    personas.css — estilos exclusivos de personas.html
-   No modifica style.css ni afecta otras páginas.
+   Versión compacta con hero, comparativa cards y simulador CI.
    ============================================================ */
+
+
+/* ─── HERO COMPACTO ──────────────────────────────────────────── */
+
+.personas-hero {
+  padding: 4.5rem 0 3rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.personas-hero-title {
+  font-family: var(--cormorant);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 400;
+  color: var(--accent);
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.personas-hero-sub {
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.75;
+}
+
+/* Stats del hero */
+.hero-stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  max-width: 580px;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.hero-stat-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background: var(--bg);
+  gap: 3px;
+}
+
+.hero-stat-divider {
+  font-family: var(--cormorant);
+  font-size: 1.1rem;
+  color: var(--muted);
+  padding: 0 0.5rem;
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
+.hero-stat-num {
+  font-family: var(--cormorant);
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.hero-stat--muted  { color: var(--border); }
+.hero-stat--green  { color: #2a7d5e; }
+.hero-stat--accent { color: var(--accent); }
+
+.hero-stat-label {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  text-transform: uppercase;
+}
+
+.hero-stat-sub {
+  font-size: 0.68rem;
+  color: var(--muted);
+}
 
 
 /* ─── SECCIONES BASE ─────────────────────────────────────────── */
 
 .personas-section {
-  padding: 5rem 0;
+  padding: 4rem 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -17,68 +101,20 @@
 
 .section-title-personas {
   font-family: var(--cormorant);
-  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
   font-weight: 400;
   color: var(--accent);
   line-height: 1.1;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
   margin-top: 0.25rem;
 }
 
 .section-sub {
-  font-size: 0.93rem;
+  font-size: 0.9rem;
   color: var(--muted);
-  max-width: 560px;
+  max-width: 540px;
   line-height: 1.75;
-  margin-bottom: 2.5rem;
-}
-
-
-/* ─── TARJETAS DE MÉTRICAS ───────────────────────────────────── */
-
-.metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
   margin-bottom: 2rem;
-}
-
-.metric-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 1.5rem 1rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
-
-.metric-num {
-  font-family: var(--cormorant);
-  font-size: 2.6rem;
-  font-weight: 500;
-  line-height: 1;
-  margin-bottom: 0.4rem;
-}
-
-.metric-num--muted  { color: var(--border); }
-.metric-num--green  { color: #2a7d5e; }
-.metric-num--blue   { color: var(--accent); }
-.metric-num--accent { color: var(--secondary); }
-
-.metric-label {
-  font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  color: var(--text);
-  text-transform: uppercase;
-}
-
-.metric-sub {
-  font-size: 0.72rem;
-  color: var(--muted);
-  margin-top: 0.2rem;
 }
 
 
@@ -88,14 +124,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
 }
 
 .chart-legend-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--muted);
 }
 
@@ -116,97 +152,230 @@
 }
 
 
-/* ─── TABS DE TASA ───────────────────────────────────────────── */
+/* ─── COMPARATIVA CARDS ──────────────────────────────────────── */
 
-.rate-tabs {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1.75rem;
-  flex-wrap: wrap;
+.comparativa-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
-.rate-tab {
-  background: transparent;
+.comp-card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 0.5rem 1.25rem;
+  padding: 1.5rem 1.4rem;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.comp-card--featured {
+  border-color: var(--accent);
+  background: var(--surface);
+  position: relative;
+}
+
+.comp-card-winner {
+  display: inline-block;
+  align-self: flex-start;
   font-family: var(--jost);
-  font-size: 0.75rem;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(62, 74, 61, 0.1);
+  color: var(--accent);
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.comp-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.comp-card-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.comp-card-name {
+  font-family: var(--jost);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  display: block;
+  line-height: 1.3;
+}
+
+.comp-card-sub {
+  font-size: 0.72rem;
+  color: var(--muted);
+  display: block;
+}
+
+.comp-card-rows {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.comp-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--border);
+  gap: 0.5rem;
+}
+
+.comp-row:last-child {
+  border-bottom: none;
+}
+
+.comp-row-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.comp-row-val {
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-align: right;
+}
+
+.comp-val--bad  { color: #8b3a3a; }
+.comp-val--good { color: #2a7d5e; }
+
+
+/* ─── SIMULADOR INTERÉS COMPUESTO ────────────────────────────── */
+
+.ci-controls-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.ci-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.ci-control-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.ci-control-label {
+  font-family: var(--jost);
+  font-size: 0.68rem;
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
-  cursor: pointer;
-  transition: border-color var(--transition), color var(--transition), background var(--transition);
 }
 
-.rate-tab:hover {
-  border-color: var(--accent);
+.ci-control-val {
+  font-family: var(--cormorant);
+  font-size: 1.3rem;
+  font-weight: 500;
   color: var(--accent);
 }
 
-.rate-tab--active {
+/* Slider base */
+.ci-control input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.ci-control input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
   background: var(--accent);
-  border-color: var(--accent);
-  color: var(--bg);
+  cursor: pointer;
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--accent);
+  transition: transform 0.15s ease;
 }
 
+.ci-control input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
 
-/* ─── COMPARATIVA LAYOUT ─────────────────────────────────────── */
+.ci-control input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: 2px solid var(--bg);
+}
 
-.comparativa-layout {
+/* Tarjetas de resultado */
+.ci-results-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+  margin-bottom: 0.5rem;
 }
 
-.comparativa-table-wrap {
-  overflow-x: auto;
+.ci-result-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.2rem 0.75rem;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  gap: 3px;
 }
 
-.comparativa-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.88rem;
+.ci-result-card--highlight {
+  border-color: var(--secondary);
+  background: var(--bg);
 }
 
-.comparativa-table thead {
-  background: var(--accent);
-}
-
-.comparativa-table th {
-  padding: 0.9rem 1.1rem;
-  text-align: left;
-  font-family: var(--jost);
-  font-size: 0.62rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
+.ci-result-year {
+  font-size: 0.68rem;
   text-transform: uppercase;
-  color: rgba(244, 244, 242, 0.6);
+  letter-spacing: 0.1em;
+  color: var(--muted);
 }
 
-.comparativa-table td {
-  padding: 0.9rem 1.1rem;
-  border-bottom: 1px solid var(--border);
-  color: var(--text);
-  font-size: 0.86rem;
-  vertical-align: middle;
-}
-
-.comparativa-table tr:last-child td {
-  border-bottom: none;
-}
-
-.comparativa-table tbody tr:hover td {
-  background: var(--surface);
-}
-
-.td-highlight {
-  color: var(--accent);
+.ci-result-amount {
+  font-family: var(--cormorant);
+  font-size: 1.55rem;
   font-weight: 500;
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.ci-result-gain {
+  font-size: 0.72rem;
+  color: #2a7d5e;
+  margin-top: 1px;
 }
 
 
@@ -215,14 +384,14 @@
 .carteras-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .cartera-card {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  padding: 2rem 1.75rem;
+  gap: 0.65rem;
+  padding: 1.75rem 1.5rem;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface-alt);
@@ -231,7 +400,7 @@
 
 .cartera-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 4px 24px rgba(62, 74, 61, 0.07);
+  box-shadow: 0 4px 20px rgba(62, 74, 61, 0.07);
 }
 
 .cartera-card--featured {
@@ -257,14 +426,14 @@
 
 .cartera-name {
   font-family: var(--cormorant);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: var(--accent);
   line-height: 1.15;
 }
 
 .cartera-desc {
-  font-size: 0.84rem;
+  font-size: 0.83rem;
   color: var(--muted);
   line-height: 1.65;
 }
@@ -272,20 +441,21 @@
 .cartera-chart-wrap {
   position: relative;
   width: 100%;
-  height: 160px;
-  margin: 0.5rem 0;
+  height: 150px;
+  margin: 0.25rem 0;
 }
 
 .cartera-items {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.3rem;
   border-top: 1px solid var(--border);
-  padding-top: 0.75rem;
+  padding-top: 0.7rem;
+  list-style: none;
 }
 
 .cartera-items li {
-  font-size: 0.84rem;
+  font-size: 0.83rem;
   color: var(--text);
   padding-left: 1rem;
   position: relative;
@@ -302,15 +472,13 @@
 
 .cartera-footer {
   margin-top: auto;
-  padding-top: 0.75rem;
+  padding-top: 0.65rem;
   border-top: 1px solid var(--border);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--muted);
 }
 
-.cartera-rend {
-  font-weight: 500;
-}
+.cartera-rend { font-weight: 500; }
 .cartera-rend--c { color: #2a7d5e; }
 .cartera-rend--m { color: var(--accent); }
 .cartera-rend--a { color: var(--secondary); }
@@ -320,7 +488,7 @@
 
 .cta-perfil-section {
   background: var(--accent);
-  padding: 5rem 0;
+  padding: 4.5rem 0;
   position: relative;
   overflow: hidden;
 }
@@ -348,7 +516,7 @@
 
 .cta-perfil-title {
   font-family: var(--cormorant);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 400;
   color: #f4f4f2;
   line-height: 1.1;
@@ -357,10 +525,10 @@
 }
 
 .cta-perfil-sub {
-  font-size: 0.93rem;
+  font-size: 0.9rem;
   color: rgba(244, 244, 242, 0.6);
   line-height: 1.75;
-  max-width: 480px;
+  max-width: 460px;
 }
 
 .cta-perfil-actions {
@@ -387,14 +555,22 @@
 
 @media (max-width: 900px) {
 
-  .metrics-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
+  .hero-stats-row {
+    max-width: 420px;
   }
 
-  .comparativa-layout {
+  .comparativa-cards {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
+  }
+
+  .ci-controls-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ci-results-row {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .carteras-grid {
@@ -420,42 +596,60 @@
 
 @media (max-width: 600px) {
 
+  .personas-hero {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .hero-stats-row {
+    flex-direction: column;
+    max-width: 100%;
+    gap: 0;
+  }
+
+  .hero-stat-card {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+    padding: 1.1rem 1rem;
+  }
+
+  .hero-stat-card:last-child {
+    border-bottom: none;
+  }
+
+  .hero-stat-divider {
+    display: none;
+  }
+
   .personas-section {
-    padding: 3.5rem 0;
+    padding: 3rem 0;
   }
 
-  .metrics-grid {
+  .ci-results-row {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
+    gap: 0.6rem;
   }
 
-  .metric-card {
+  .ci-result-card {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     text-align: left;
-    padding: 1rem 1.25rem;
+    padding: 0.9rem 1rem;
   }
 
-  .metric-num {
-    font-size: 2rem;
-    margin-bottom: 0;
+  .ci-result-year,
+  .ci-result-gain {
+    font-size: 0.72rem;
   }
 
-  .rate-tabs {
-    gap: 0.4rem;
-  }
-
-  .rate-tab {
-    padding: 0.45rem 0.9rem;
-    font-size: 0.7rem;
+  .ci-result-amount {
+    font-size: 1.3rem;
   }
 
   .cartera-chart-wrap {
-    height: 140px;
+    height: 130px;
   }
 
   .cta-perfil-section {
-    padding: 3.5rem 0;
+    padding: 3rem 0;
   }
 }
