@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="css/personas.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
-  <!-- Chart.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js" defer></script>
 </head>
 <body class="page-personas">
@@ -39,42 +38,43 @@
 
   <main>
 
-    <!-- ─── PAGE HEADER ──────────────────────────────────────────── -->
-    <section class="page-header">
+    <!-- ─── HERO COMPACTO ─────────────────────────────────────── -->
+    <section class="personas-hero">
       <div class="container">
         <p class="section-label">Asesoría Particular</p>
-        <h1 class="page-title">Invertir con Inteligencia</h1>
-        <p class="page-subtitle">Dejemos de solo ahorrar y empecemos a hacer que el dinero trabaje para vos.</p>
+        <h1 class="personas-hero-title">Dejá de solo ahorrar.<br>Hacé que tu dinero trabaje.</h1>
+        <p class="personas-hero-sub">La diferencia entre guardar plata e invertirla define tu futuro financiero. Los números lo dicen todo.</p>
+
+        <!-- Métricas de impacto -->
+        <div class="hero-stats-row">
+          <div class="hero-stat-card">
+            <span class="hero-stat-num hero-stat--muted">1.5%</span>
+            <span class="hero-stat-label">Caja de ahorro</span>
+            <span class="hero-stat-sub">anual USD</span>
+          </div>
+          <div class="hero-stat-divider">vs</div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-num hero-stat--green">9%</span>
+            <span class="hero-stat-label">FCI / ON</span>
+            <span class="hero-stat-sub">anual USD</span>
+          </div>
+          <div class="hero-stat-divider">vs</div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-num hero-stat--accent">11%</span>
+            <span class="hero-stat-label">S&amp;P 500 ETF</span>
+            <span class="hero-stat-sub">promedio histórico</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ─── SECCIÓN 1: EL PROBLEMA ───────────────────────────────── -->
+    <!-- ─── SECCIÓN 1: GRÁFICO RENDIMIENTOS ──────────────────── -->
     <section class="personas-section">
       <div class="container">
         <p class="section-label">El problema real</p>
-        <h2 class="section-title-personas">La mayoría ahorra.<br>Pocos invierten.</h2>
+        <h2 class="section-title-personas">¿Cuánto ganás según dónde ponés tu dinero?</h2>
         <p class="section-sub">Rendimiento anualizado promedio en los últimos 10 años</p>
 
-        <!-- Tarjetas de métricas -->
-        <div class="metrics-grid">
-          <div class="metric-card">
-            <span class="metric-num metric-num--muted">1.5%</span>
-            <span class="metric-label">Caja de ahorro USD</span>
-            <span class="metric-sub">Rendimiento anual</span>
-          </div>
-          <div class="metric-card">
-            <span class="metric-num metric-num--green">9%</span>
-            <span class="metric-label">FCI Dólar / ON</span>
-            <span class="metric-sub">Rendimiento anual</span>
-          </div>
-          <div class="metric-card">
-            <span class="metric-num metric-num--blue">11%</span>
-            <span class="metric-label">S&amp;P 500 (ETF)</span>
-            <span class="metric-sub">Promedio histórico</span>
-          </div>
-        </div>
-
-        <!-- Leyenda -->
         <div class="chart-legend">
           <span class="chart-legend-item">
             <span class="chart-legend-sq" style="background:#9e9d96"></span>
@@ -90,54 +90,175 @@
           </span>
         </div>
 
-        <!-- Gráfico de barras -->
-        <div class="chart-wrap" style="height: 220px;">
+        <div class="chart-wrap" style="height: 200px;">
           <canvas id="chart-rendimientos"
             role="img"
-            aria-label="Comparativa de rendimientos: Caja de ahorro 1.5%, FCI Dólar 9%, S&P 500 11% anual">
+            aria-label="Gráfico de barras: caja de ahorro 1.5%, FCI Dólar 9%, S&P 500 11% anual">
             Caja de ahorro 1.5%, FCI Dólar 9%, S&P 500 11% anual.
           </canvas>
         </div>
       </div>
     </section>
 
-    <!-- ─── SECCIÓN 2: INTERÉS COMPUESTO ─────────────────────────── -->
+    <!-- ─── SECCIÓN 2: COMPARATIVA DEPTO vs FCI ──────────────── -->
     <section class="personas-section personas-section--alt">
       <div class="container">
+        <p class="section-label">Comparativa de activos</p>
+        <h2 class="section-title-personas">Departamento para alquilar vs FCI en dólares</h2>
+        <p class="section-sub">¿Es realmente conveniente comprar un depto para rentar? Compará en frío.</p>
+
+        <div class="comparativa-cards">
+
+          <!-- Departamento -->
+          <div class="comp-card comp-card--neutral">
+            <div class="comp-card-header">
+              <svg class="comp-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>
+              </svg>
+              <div>
+                <span class="comp-card-name">Departamento</span>
+                <span class="comp-card-sub">para alquilar</span>
+              </div>
+            </div>
+            <ul class="comp-card-rows">
+              <li class="comp-row">
+                <span class="comp-row-label">Inversión inicial</span>
+                <span class="comp-row-val comp-val--bad">US$80.000+</span>
+              </li>
+              <li class="comp-row">
+                <span class="comp-row-label">Rentabilidad neta</span>
+                <span class="comp-row-val comp-val--bad">3–5% anual</span>
+              </li>
+              <li class="comp-row">
+                <span class="comp-row-label">Liquidez</span>
+                <span class="comp-row-val comp-val--bad">Baja (meses)</span>
+              </li>
+              <li class="comp-row">
+                <span class="comp-row-label">Mantenimiento</span>
+                <span class="comp-row-val comp-val--bad">Alto</span>
+              </li>
+              <li class="comp-row">
+                <span class="comp-row-label">Diversificación</span>
+                <span class="comp-row-val comp-val--bad">Ninguna</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- FCI / ON -->
+          <div class="comp-card comp-card--featured">
+            <div class="comp-card-winner">Mejor relación rendimiento / riesgo</div>
+            <div class="comp-card-header">
+              <svg class="comp-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                <polyline points="16 7 22 7 22 13"/>
+              </svg>
+              <div>
+                <span class="comp-card-name">FCI / ON en dólares</span>
+                <span class="comp-card-sub">fondo común de inversión</span>
+              </div>
+            </div>
+            <ul class="comp-card-rows">
+              <li class="comp-row">
+                <span class="comp-row-label">Inversión inicial</span>
+                <span class="comp-row-val comp-val--good">Desde US$1.000</span>
+              </li>
+              <li class="comp-row">
+                <span class="comp-row-label">Rentabilidad neta</span>
+                <span class="comp-row-val comp-val--good">8–11% anual</span>
+              </li>
+              <li class="comp-row">
+                <span class="comp-row-label">Liquidez</span>
+                <span class="comp-row-val comp-val--good">Alta (24–72 hs)</span>
+              </li>
+              <li class="comp-row">
+                <span class="comp-row-label">Mantenimiento</span>
+                <span class="comp-row-val comp-val--good">Mínimo</span>
+              </li>
+              <li class="comp-row">
+                <span class="comp-row-label">Diversificación</span>
+                <span class="comp-row-val comp-val--good">Alta</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Gráfico radar debajo -->
+        <div class="chart-legend" style="margin-top: 2.5rem;">
+          <span class="chart-legend-item">
+            <span class="chart-legend-sq" style="background:#9e9d96"></span>
+            Departamento
+          </span>
+          <span class="chart-legend-item">
+            <span class="chart-legend-sq" style="background:#3e4a3d"></span>
+            ON / FCI Dólar
+          </span>
+        </div>
+        <div class="chart-wrap" style="height: 280px; max-width: 400px; margin: 0 auto;">
+          <canvas id="chart-radar"
+            role="img"
+            aria-label="Gráfico radar comparando departamento versus ON en cinco dimensiones">
+            Comparativa radar entre departamento y ON/FCI dólar.
+          </canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECCIÓN 3: SIMULADOR INTERÉS COMPUESTO ───────────── -->
+    <section class="personas-section">
+      <div class="container">
         <p class="section-label">El poder del tiempo</p>
-        <h2 class="section-title-personas">La magia del interés compuesto</h2>
-        <p class="section-sub">Cómo crece US$10.000 invertidos según tasa y horizonte</p>
+        <h2 class="section-title-personas">Simulá la magia del interés compuesto</h2>
+        <p class="section-sub">Mové los controles y mirá cómo crece tu dinero en tiempo real.</p>
 
-        <!-- Tabs de tasa -->
-        <div class="rate-tabs" id="rate-tabs" role="group" aria-label="Seleccionar tasa de interés">
-          <button class="rate-tab rate-tab--active" data-rate="7">7% anual</button>
-          <button class="rate-tab" data-rate="10">10% anual</button>
-          <button class="rate-tab" data-rate="12">12% anual</button>
+        <!-- Controles -->
+        <div class="ci-controls-grid">
+          <div class="ci-control">
+            <div class="ci-control-top">
+              <span class="ci-control-label">Capital inicial</span>
+              <span class="ci-control-val" id="ci-cap-val">US$10.000</span>
+            </div>
+            <input type="range" id="ci-cap" min="1000" max="100000" step="1000" value="10000">
+          </div>
+          <div class="ci-control">
+            <div class="ci-control-top">
+              <span class="ci-control-label">Tasa anual</span>
+              <span class="ci-control-val" id="ci-rate-val">9%</span>
+            </div>
+            <input type="range" id="ci-rate" min="3" max="18" step="1" value="9">
+          </div>
+          <div class="ci-control">
+            <div class="ci-control-top">
+              <span class="ci-control-label">Horizonte</span>
+              <span class="ci-control-val" id="ci-years-val">20 años</span>
+            </div>
+            <input type="range" id="ci-years" min="5" max="40" step="1" value="20">
+          </div>
         </div>
 
-        <!-- Tarjetas de resultado -->
-        <div class="metrics-grid">
-          <div class="metric-card">
-            <span class="metric-num metric-num--accent" id="ci-10">$19.672</span>
-            <span class="metric-label">En 10 años</span>
-            <span class="metric-sub">Desde US$10.000</span>
+        <!-- Resultados -->
+        <div class="ci-results-row">
+          <div class="ci-result-card">
+            <span class="ci-result-year">Año 10</span>
+            <span class="ci-result-amount" id="ci-r10">–</span>
+            <span class="ci-result-gain" id="ci-g10">–</span>
           </div>
-          <div class="metric-card">
-            <span class="metric-num metric-num--accent" id="ci-20">$38.697</span>
-            <span class="metric-label">En 20 años</span>
-            <span class="metric-sub">Desde US$10.000</span>
+          <div class="ci-result-card">
+            <span class="ci-result-year">Año 20</span>
+            <span class="ci-result-amount" id="ci-r20">–</span>
+            <span class="ci-result-gain" id="ci-g20">–</span>
           </div>
-          <div class="metric-card">
-            <span class="metric-num metric-num--accent" id="ci-30">$76.123</span>
-            <span class="metric-label">En 30 años</span>
-            <span class="metric-sub">Desde US$10.000</span>
+          <div class="ci-result-card ci-result-card--highlight">
+            <span class="ci-result-year" id="ci-year-lbl">Año 40</span>
+            <span class="ci-result-amount" id="ci-rmax">–</span>
+            <span class="ci-result-gain" id="ci-gmax">–</span>
           </div>
         </div>
 
-        <!-- Leyenda -->
+        <!-- Leyenda y gráfico -->
         <div class="chart-legend" style="margin-top: 1.5rem;">
           <span class="chart-legend-item">
-            <span class="chart-legend-sq" style="background: rgba(62,74,61,0.25); border: 1px dashed #3e4a3d;"></span>
+            <span class="chart-legend-sq" style="background: rgba(62,74,61,0.2); border:1px dashed #3e4a3d;"></span>
             Capital inicial
           </span>
           <span class="chart-legend-item">
@@ -145,93 +266,17 @@
             Crecimiento acumulado
           </span>
         </div>
-
-        <!-- Gráfico de línea -->
-        <div class="chart-wrap" style="height: 280px;">
+        <div class="chart-wrap" style="height: 240px;">
           <canvas id="chart-compuesto"
             role="img"
-            aria-label="Gráfico de línea mostrando el crecimiento de US$10.000 con interés compuesto a lo largo de 30 años">
-            Crecimiento de US$10.000 con interés compuesto a lo largo de 30 años.
+            aria-label="Gráfico de área mostrando el crecimiento del capital con interés compuesto">
+            Crecimiento del capital con interés compuesto.
           </canvas>
         </div>
       </div>
     </section>
 
-    <!-- ─── SECCIÓN 3: COMPARATIVA DEPARTAMENTO vs ON ─────────────── -->
-    <section class="personas-section">
-      <div class="container">
-        <p class="section-label">Comparativa de activos</p>
-        <h2 class="section-title-personas">Departamento vs ON / FCI Dólar</h2>
-        <p class="section-sub">Análisis multidimensional: rendimiento, liquidez y accesibilidad</p>
-
-        <div class="comparativa-layout">
-
-          <!-- Gráfico radar -->
-          <div>
-            <div class="chart-legend" style="margin-bottom: 1rem;">
-              <span class="chart-legend-item">
-                <span class="chart-legend-sq" style="background:#9e9d96"></span>
-                Departamento
-              </span>
-              <span class="chart-legend-item">
-                <span class="chart-legend-sq" style="background:#3e4a3d"></span>
-                ON / FCI Dólar
-              </span>
-            </div>
-            <div class="chart-wrap" style="height: 300px;">
-              <canvas id="chart-radar"
-                role="img"
-                aria-label="Gráfico radar comparando departamento versus ON en cinco dimensiones">
-                Comparativa radar entre departamento y ON/FCI dólar en cinco dimensiones.
-              </canvas>
-            </div>
-          </div>
-
-          <!-- Tabla de comparativa -->
-          <div class="comparativa-table-wrap">
-            <table class="comparativa-table">
-              <thead>
-                <tr>
-                  <th>Aspecto</th>
-                  <th>Departamento</th>
-                  <th>ON / FCI Dólar</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Inversión inicial</td>
-                  <td>Alta (US$80k+)</td>
-                  <td class="td-highlight">Desde US$1.000</td>
-                </tr>
-                <tr>
-                  <td>Mantenimiento</td>
-                  <td>Alto</td>
-                  <td class="td-highlight">Mínimo</td>
-                </tr>
-                <tr>
-                  <td>Rentabilidad</td>
-                  <td>3–6% anual</td>
-                  <td class="td-highlight">8–11% anual</td>
-                </tr>
-                <tr>
-                  <td>Liquidez</td>
-                  <td>Baja (meses)</td>
-                  <td class="td-highlight">Alta (días)</td>
-                </tr>
-                <tr>
-                  <td>Diversificación</td>
-                  <td>Baja</td>
-                  <td class="td-highlight">Alta</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── SECCIÓN 4: CARTERAS SUGERIDAS ────────────────────────── -->
+    <!-- ─── SECCIÓN 4: CARTERAS SUGERIDAS ────────────────────── -->
     <section class="personas-section personas-section--alt">
       <div class="container">
         <p class="section-label">Modelos sugeridos</p>
@@ -313,7 +358,7 @@
       </div>
     </section>
 
-    <!-- ─── CTA TEST DE PERFIL ────────────────────────────────────── -->
+    <!-- ─── CTA TEST DE PERFIL ────────────────────────────────── -->
     <section class="cta-perfil-section">
       <div class="container">
         <div class="cta-perfil-inner">
@@ -333,7 +378,7 @@
       </div>
     </section>
 
-    <!-- ─── TEST DE PERFIL ────────────────────────────────────────── -->
+    <!-- ─── TEST DE PERFIL ────────────────────────────────────── -->
     <section id="test-perfil" class="personas-section">
       <div class="container">
         <p class="section-label">Test de perfil</p>
@@ -363,7 +408,7 @@
 
   </main>
 
-  <!-- ─── FOOTER ────────────────────────────────────────────────── -->
+  <!-- ─── FOOTER ─────────────────────────────────────────────── -->
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
@@ -392,5 +437,259 @@
   <script src="js/main.js"></script>
   <script src="js/personas-charts.js"></script>
   <script src="js/test.js"></script>
+
+  <!-- ─── SCRIPTS INLINE: GRÁFICOS NUEVOS + SIMULADOR ─────────── -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      /* ── Utilidades ── */
+      const fmtFull = v => 'US$' + Math.round(v).toLocaleString('es-AR');
+
+      /* ─────────────────────────────────────────────────────────────
+         1. GRÁFICO RENDIMIENTOS (barras horizontales)
+      ──────────────────────────────────────────────────────────── */
+      const ctxRend = document.getElementById('chart-rendimientos');
+      if (ctxRend) {
+        new Chart(ctxRend, {
+          type: 'bar',
+          data: {
+            labels: ['Caja de ahorro USD', 'FCI Dólar / ON', 'S&P 500 ETF'],
+            datasets: [{
+              data: [1.5, 9, 11],
+              backgroundColor: ['#9e9d96', '#2a7d5e', '#3e4a3d'],
+              borderWidth: 0,
+              borderRadius: 6,
+            }]
+          },
+          options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: { callbacks: { label: ctx => ' ' + ctx.parsed.x + '% anual' } }
+            },
+            scales: {
+              x: {
+                max: 14,
+                grid: { color: 'rgba(100,100,100,0.1)' },
+                ticks: { callback: v => v + '%', font: { size: 11 }, color: '#888' }
+              },
+              y: {
+                grid: { display: false },
+                ticks: { font: { size: 12 }, color: '#555' }
+              }
+            }
+          }
+        });
+      }
+
+      /* ─────────────────────────────────────────────────────────────
+         2. GRÁFICO RADAR COMPARATIVA
+      ──────────────────────────────────────────────────────────── */
+      const ctxRadar = document.getElementById('chart-radar');
+      if (ctxRadar) {
+        new Chart(ctxRadar, {
+          type: 'radar',
+          data: {
+            labels: ['Rentabilidad', 'Liquidez', 'Accesibilidad', 'Diversificación', 'Bajo costo'],
+            datasets: [
+              {
+                label: 'Departamento',
+                data: [4, 2, 2, 1, 2],
+                backgroundColor: 'rgba(158,157,150,0.15)',
+                borderColor: '#9e9d96',
+                borderWidth: 1.5,
+                pointBackgroundColor: '#9e9d96',
+                pointRadius: 3,
+                borderDash: [4, 3]
+              },
+              {
+                label: 'ON / FCI Dólar',
+                data: [8, 8, 9, 8, 9],
+                backgroundColor: 'rgba(62,74,61,0.12)',
+                borderColor: '#3e4a3d',
+                borderWidth: 1.5,
+                pointBackgroundColor: '#3e4a3d',
+                pointRadius: 3
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              r: {
+                min: 0, max: 10,
+                ticks: { display: false, stepSize: 2 },
+                grid: { color: 'rgba(100,100,100,0.12)' },
+                pointLabels: { font: { size: 11, family: 'Jost, sans-serif' }, color: '#666' },
+                angleLines: { color: 'rgba(100,100,100,0.1)' }
+              }
+            }
+          }
+        });
+      }
+
+      /* ─────────────────────────────────────────────────────────────
+         3. SIMULADOR INTERÉS COMPUESTO
+      ──────────────────────────────────────────────────────────── */
+      const ciCapEl   = document.getElementById('ci-cap');
+      const ciRateEl  = document.getElementById('ci-rate');
+      const ciYearsEl = document.getElementById('ci-years');
+      let ciChart = null;
+
+      function updateCI() {
+        const cap   = parseInt(ciCapEl.value);
+        const rate  = parseInt(ciRateEl.value) / 100;
+        const years = parseInt(ciYearsEl.value);
+
+        document.getElementById('ci-cap-val').textContent   = fmtFull(cap);
+        document.getElementById('ci-rate-val').textContent  = Math.round(rate * 100) + '%';
+        document.getElementById('ci-years-val').textContent = years + ' años';
+        document.getElementById('ci-year-lbl').textContent  = 'Año ' + years;
+
+        const calc = y => Math.round(cap * Math.pow(1 + rate, y));
+        const gain = y => {
+          const v = calc(y);
+          return '+' + fmtFull(v - cap) + ' ganados';
+        };
+
+        document.getElementById('ci-r10').textContent  = fmtFull(calc(10));
+        document.getElementById('ci-g10').textContent  = gain(10);
+        document.getElementById('ci-r20').textContent  = fmtFull(calc(20));
+        document.getElementById('ci-g20').textContent  = gain(20);
+        document.getElementById('ci-rmax').textContent = fmtFull(calc(years));
+        document.getElementById('ci-gmax').textContent = gain(years);
+
+        const labels = [], dataCapital = [], dataGrowth = [];
+        for (let y = 0; y <= years; y++) {
+          labels.push(y === 0 ? 'Hoy' : (y % 5 === 0 || y === years ? 'Año ' + y : ''));
+          dataCapital.push(cap);
+          dataGrowth.push(Math.round(cap * Math.pow(1 + rate, y) - cap));
+        }
+
+        if (ciChart) {
+          ciChart.data.labels = labels;
+          ciChart.data.datasets[0].data = dataCapital;
+          ciChart.data.datasets[1].data = dataGrowth;
+          ciChart.update('none');
+        } else {
+          const ctxCI = document.getElementById('chart-compuesto');
+          if (!ctxCI) return;
+          ciChart = new Chart(ctxCI, {
+            type: 'bar',
+            data: {
+              labels,
+              datasets: [
+                {
+                  label: 'Capital inicial',
+                  data: dataCapital,
+                  backgroundColor: 'rgba(62,74,61,0.18)',
+                  borderWidth: 0
+                },
+                {
+                  label: 'Crecimiento',
+                  data: dataGrowth,
+                  backgroundColor: '#3e4a3d',
+                  borderWidth: 0,
+                  borderRadius: 3
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  callbacks: {
+                    label: ctx => ctx.dataset.label + ': ' + fmtFull(ctx.parsed.y)
+                  }
+                }
+              },
+              scales: {
+                x: {
+                  stacked: true,
+                  grid: { display: false },
+                  ticks: { font: { size: 10 }, color: '#888', maxRotation: 0 }
+                },
+                y: {
+                  stacked: true,
+                  grid: { color: 'rgba(100,100,100,0.08)' },
+                  ticks: {
+                    callback: v => v >= 1000 ? '$' + (v / 1000).toFixed(0) + 'k' : '$' + v,
+                    font: { size: 10 }, color: '#888'
+                  }
+                }
+              }
+            }
+          });
+        }
+      }
+
+      if (ciCapEl && ciRateEl && ciYearsEl) {
+        ciCapEl.addEventListener('input', updateCI);
+        ciRateEl.addEventListener('input', updateCI);
+        ciYearsEl.addEventListener('input', updateCI);
+        updateCI();
+      }
+
+      /* ─────────────────────────────────────────────────────────────
+         4. CARTERAS — GRÁFICOS DE DONA (si personas-charts.js no los cubre)
+         Nota: si tu personas-charts.js ya inicializa chart-cartera-c/m/a,
+         podés borrar este bloque.
+      ──────────────────────────────────────────────────────────── */
+      const carteras = [
+        {
+          id: 'chart-cartera-c',
+          data: [50, 30, 15, 5],
+          labels: ['Money Market', 'ON grado inv.', 'Lecap', 'Cedears def.'],
+          colors: ['#2a7d5e', '#3e4a3d', '#9e9d96', '#c8b97a']
+        },
+        {
+          id: 'chart-cartera-m',
+          data: [35, 25, 25, 15],
+          labels: ['ON corporativas', 'FCI Dólar', 'Cedears', 'ETFs'],
+          colors: ['#3e4a3d', '#2a7d5e', '#6b7d69', '#c8b97a']
+        },
+        {
+          id: 'chart-cartera-a',
+          data: [50, 25, 15, 10],
+          labels: ['Cedears tech', 'ETFs', 'Acciones loc.', 'ON high yield'],
+          colors: ['#3e4a3d', '#6b7d69', '#9e9d96', '#c8b97a']
+        }
+      ];
+
+      carteras.forEach(c => {
+        const el = document.getElementById(c.id);
+        if (!el) return;
+        new Chart(el, {
+          type: 'doughnut',
+          data: {
+            labels: c.labels,
+            datasets: [{
+              data: c.data,
+              backgroundColor: c.colors,
+              borderWidth: 0,
+              hoverOffset: 4
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '62%',
+            plugins: {
+              legend: { display: false },
+              tooltip: { callbacks: { label: ctx => ctx.label + ': ' + ctx.parsed + '%' } }
+            }
+          }
+        });
+      });
+
+    });
+  </script>
+
 </body>
 </html>
